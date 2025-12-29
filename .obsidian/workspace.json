@@ -4,141 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "85ad723b9aa00cf2",
+        "id": "16f06b9a6cee4711",
         "type": "tabs",
-        "dimension": 42.13349225268176,
         "children": [
           {
-            "id": "baaab006c99cbc6f",
+            "id": "f0a7848480ee573b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "spring notes.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "spring notes"
-            }
-          },
-          {
-            "id": "d0d0c1fe78a0f74e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/frameworks_libraries/spring/spring.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "spring"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "48aad9d905cb5f59",
-        "type": "split",
-        "dimension": 57.86650774731824,
-        "children": [
-          {
-            "id": "4b1bab66c4b8d516",
-            "type": "tabs",
-            "dimension": 49.41176470588235,
-            "children": [
-              {
-                "id": "d76477ece6076d41",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/frameworks_libraries/spring/spring_entity.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "spring_entity"
-                }
-              },
-              {
-                "id": "878c5a7d3b6280f2",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/frameworks_libraries/spring/spring_dto.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "spring_dto"
-                }
-              }
-            ],
-            "currentTab": 1
-          },
-          {
-            "id": "284532731eb864a2",
-            "type": "tabs",
-            "dimension": 50.58823529411765,
-            "children": [
-              {
-                "id": "68875286be206c45",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/frameworks_libraries/spring/spring_mvc_controller.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "spring_mvc_controller"
-                }
-              },
-              {
-                "id": "de5c00c2ae84957b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/frameworks_libraries/spring/spring_repository.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "spring_repository"
-                }
-              },
-              {
-                "id": "4acb9c05eb71286c",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/frameworks_libraries/spring/spring_rest_api_controller.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "spring_rest_api_controller"
-                }
-              }
-            ],
-            "currentTab": 2
-          }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,13 +37,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/frameworks_libraries/spring/spring.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of spring"
+              "title": "Outline"
             }
           }
         ]
@@ -180,7 +58,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/frameworks_libraries/spring/spring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +67,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for spring"
+              "title": "Backlinks"
             }
           }
         ]
@@ -241,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -252,35 +128,34 @@
       "templater-obsidian:Templater": true
     }
   },
-  "active": "d0d0c1fe78a0f74e",
+  "active": "f0a7848480ee573b",
   "lastOpenFiles": [
-    "notes/frameworks_libraries/spring/spring_configuration.md",
-    "notes/frameworks_libraries/spring/spring.md",
-    "Assets/Pasted image 20251201130403.png",
-    "notes/frameworks_libraries/spring/spring_dto.md",
-    "notes/frameworks_libraries/spring/spring_security.md",
-    "notes/frameworks_libraries/spring/spring_rest_api_controller.md",
-    "notes/frameworks_libraries/spring/spring_exceptions.md",
+    "concepts_mojibake.md",
+    "Assets/Pasted image 20251229181553.png",
+    "notes/frameworks_libraries/angular/angular_forms.md",
+    "notes/frameworks_libraries/angular/angular.md",
+    "notes/frameworks_libraries/angular/angular_routing.md",
     "spring notes.md",
-    "notes/frameworks_libraries/spring/spring_mapstruck.md",
+    "notes/programming_languages/python/Python.md",
+    "notes/concepts/concepts_.md",
+    "CLIENTE.md",
+    "nodejs_npm.md",
+    "notes/concepts/concepts_package_manager.md",
+    "notes/nodejs/nodejs_version_managers.md",
+    "notes/nodejs/nodejs.md",
+    "notes/nodejs/nodejs_setup.md",
+    "notes/frameworks_libraries/spring/spring_.md",
+    "notes/frameworks_libraries/spring/spring_rest_api_controller.md",
     "notes/frameworks_libraries/spring/spring_repository.md",
     "notes/frameworks_libraries/spring/spring_mvc_controller.md",
+    "notes/frameworks_libraries/spring/spring_dto.md",
     "notes/frameworks_libraries/spring/spring_entity.md",
-    "notes/frameworks_libraries/spring/spring_service.md",
-    "notes/frameworks_libraries/spring/spring_controller.md",
-    "notes/concepts/concepts_dto.md",
+    "notes/frameworks_libraries/spring/spring.md",
+    "notes/frameworks_libraries/spring/spring_configuration.md",
+    "Assets/Pasted image 20251201130403.png",
+    "notes/frameworks_libraries/spring/spring_security.md",
+    "notes/frameworks_libraries/spring/spring_exceptions.md",
     "Assets/Pasted image 20251128174546.png",
-    "Note_.md",
-    "notes/concepts/oop/concepts_oop.md",
-    "CLIENTE.md",
-    "notes/concepts/concepts_ioc.md",
-    "notes/concepts/concepts_bytecode.md",
-    "notes/programming_languages/java/java.md",
-    "notes/frameworks_libraries/angular/angular_versions.md",
-    "notes/frameworks_libraries/angular/angular.md",
-    "notes/frameworks_libraries/jakartaee/JakartaEE.md",
-    "jpa_entity_mapping.md",
-    "jpa_java.md",
     "Assets/Pasted image 20251123215249.png",
     "Assets/Pasted image 20251122152600.png",
     "Assets/Pasted image 20251122152529.png",
@@ -289,7 +164,6 @@
     "Assets/Pasted image 20251122124748.png",
     "Assets/Pasted image 20251121175620.png",
     "Untitled",
-    "Assets/Pasted image 20251119101651.png",
     "notes/frameworks_libraries/expressjs",
     "dump/config/arch_cachyos",
     "dump/Untitled",

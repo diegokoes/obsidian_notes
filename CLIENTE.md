@@ -1,17 +1,17 @@
-# CLIENTE
+># CLIENTE
 
-## REACT
-### EXAM
+# REACT
+## EXAM
 
 email:    hola@gmail.com
 password: Hola1234
-### USEEFFECT() 
+## USEEFFECT() 
 - \[ \] -> INITIAL RENDER
 - NO -> EVERY RE RENDER
 - \[dep1,dep2,\] -> WHEN THOSE DEPENDENCIES CHANGE
 
 CLEANUP FUNCTION? -> BEFORE RUNNING AGAIN + WHEN DESTROYED
-### REACT-ROUTER-DOM
+## REACT-ROUTER-DOM
 npm install react-router-dom localforage match-sorter sort-by
 
 ```javascript
@@ -22,19 +22,19 @@ import {useLoaderData, useParams} from 'react-router-dom';
 const navigate = useNavigate();
 ```
 
-### **USELOADERDATA()**
+## **USELOADERDATA()**
 - What the loader returns (anything)
 `const products = useLoaderData();`
-### **USEPARAMS()**
+## **USEPARAMS()**
 - Gets **URL parameters** from the current route
 `const nameCategory = useParams().nameCat;`
 
-## NODE
+# NODE
 
-### EXPRESS SETUP
+## EXPRESS SETUP
 npm init 
 npm install express --save
-### MONGODB
+## MONGODB
 ** IF AM WORKING WITH NESTED OBJECTS I HAVE TO ALWAYS USE `' '`** 
 > Nested Object :
 { $set: { 'account.accountActivated' : true } }
@@ -63,9 +63,9 @@ $set: { // instead of $set {paymentMethod: { ...
 
 update: 
 - $set  would overwrite an array
-### JWT
+## JWT
 
-#### SIGN
+### SIGN
 ```js
 const JWT_ACTIVATION = jwt.sign(
 
@@ -84,25 +84,25 @@ process.env.JWT_SERVER_SIGNATURE,
 );
 ```
 
-#### VERIFY
+### VERIFY
 
 ```js
 const jwt_payload = jwt.verify(token, process.env(JWT_SIGNING_KEY));
 ```
 
-### BCRYPT
+## BCRYPT
 
-#### HASH DATA
+### HASH DATA
 ```js
 const hash = await bcrypt.hash(password, 10);
 ``` 
-#### COMPARE
+### COMPARE
 ```js
 const passwordsMatch = await bcrypt.compare(password, userData.password);
 ```
 
 
-### URLSEARCHPARAMS
+## URLSEARCHPARAMS
 
 ```javascript
 const body = {
@@ -132,13 +132,13 @@ const petCreateCustomer = await fetch(`${BASE_URL_STRIPE}/customers`, {
 
 
 
-## ANGULAR
+# ANGULAR
 
 //TODO ver componentes standalone diffs versiones
 
 @ decorators A nivel de clase //TODO 
 
-### FORMS
+## FORMS
 
 Two types of forms: 
 - Reactive forms // recommended + complicated 
@@ -193,7 +193,7 @@ Observable (post returns Observable)
 
 OnInit & OnDestroy - interfaces 
 
-### ROUTING
+## ROUTING
 
 `<router-outlet/>`
 
@@ -216,7 +216,7 @@ canActivate (rutas padres) , canActivateChild (hijas)...
 
 Url Tree en el guard para redirigir.
 
-### INTERCEPTORS
+## INTERCEPTORS
 
 Servicio http client, con interceptors, puedes configurarle que son funciones que interceptan la petición captan el objeto request, pueden modificar cabeceras, el body y la mandan. Puede haber más de un icterceptor (chain of interceptors) , como si fueran middleware de express. 
 
@@ -233,4 +233,33 @@ puedes detectar si es request o response. HttpEventType
 siguiente coge el modificado en función rsjx
 
 Ej: almacenar en cache con un interceptor. 
+
+## COMUNICACION ENTRE COMPONENTES
+
+input crea señal.
+
+output, input. emit, poner a escucha y emitir. , interceptas con parentesis en el padre, y pones la funcion que quieres que se ejecute cuando se dispare el evento
+
+global store -> creando un servicio (creado una unica vez) , variables para ir almacenando en memoria. 
+
+antes observables, de lectura y escritura **SUBJECTS** (Antiguas versiones)  HACERLO CON ESTO 
+BEHAVIOURSUBJECT  (TIPO DE SUBJECT QUE MAS SE UTILIZA HAY MÁS)  versiones actuales signals
+
+set machaca, si no, UPDATE 
+
+
+PIPES SE IMPORTAN EN EL COMP, SE USAN EN LA VISTA
+
+
+## DRAG AND DROP -> DIRECTIVAS
+
+@Directive
+
+dos tipos: 
+- de atributo/estilos: cambian css en función de código
+- estructurales: 
+evaluan una condición
+
+
+Señales computadas: creadas a partir de otras, cuando se modifica la original, la computada se recalcula.
 

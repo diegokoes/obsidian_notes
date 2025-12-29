@@ -148,7 +148,10 @@ para accedder a clases de utilidades
 
 :redirect:/restaurants ... //TODO 
 ## SESSION
-## EXAMEN
+
+/TODO
+
+
 
 - Seguridad de endpoints en SecurityConfig, en los endpoints o como queramos.
 
@@ -168,4 +171,106 @@ IMPORTANTE EL MODELATTRIBUTE("NAMEOFATTRIBUTE) , o llamar la variable como en th
 joincolumns en manytomany, da igual el nombre de la column si es en memoria, se crea con eso.
 
 Endpoints parámetros opcionales: -> @requestparam required = false
+
+
+- - - 
+# SPRING 2
+
+F5 doble submit, post redierct get, flash attributes
+
+componentización: fragmentos (thymeleaf)
+
+reactividad
+
+## JPA AVANZADO
+
+
+09/12 -> paginación en la API
+
+Con ErrorDTO's enviados al MVC
+
+WebClient -> 
+
+ordenar dish por restaurante? 
+select para numero de mostrados
+- - - 
+tabla intermedia con propiedades específicas ? -> crear una clase/entidad, pero no entera -> @Embeddable con esas propiedades
+
+implements Serializable...? 
+
+@EmbeddedId
+
+//TODO repasar paginacion y el embedded entity. tabla intermedia?
+## JPQL
+
+query con is null , al del examen de categoria, id , estado. 
+try catch controller ? 
+
+
+@Query("""
+
+SELECT o FROM Order o
+
+WHERE (:status IS NULL OR o.status = :status)
+
+AND (:userId IS NULL OR o.user.id = :userId)
+
+AND (:restaurantId IS NULL OR o.restaurant.id = :restaurantId)
+
+""")
+
+List<Order> findByFilters(
+
+@Param("status") String status, // no es necesario el @Param si tienen el mismo nombre
+
+@Param("userId") Long userId,
+
+@Param("restaurantId") Long restaurantId
+
+);
+
+  
+
+@Query("""
+
+SELECT new es.daw.foodexpressapi.dto.OrderSummaryDTO(
+
+o.id,
+
+u.username,
+
+r.name,
+
+SUM(od.quantity),
+
+SUM(od.subtotal)
+
+)
+
+FROM Order o
+
+JOIN o.user u
+
+JOIN o.restaurant r
+
+JOIN o.orderDetails od
+
+GROUP BY o.id, u.username, r.name
+
+ORDER BY o.id
+
+""")
+
+List<OrderSummaryDTO> findAllOrderSummaries();
+
+- - - 
+QUE NO DEBE MANTENER INFO EN LA PETICIÓN -> globalexceptionhandler
+si necesito el DTO? try - catch 
+
+JPA specifications? más avanzada //TODO
+
+// mejora, devolver summary de un solo pedido
+// pendiente usar enum para dish category. ENUMERADO COMPLEJO?  si categoria = hamburguesa -> plus precio de x euros.
+
+// webclient -> on status PENDIENTE , con el error dto, devolver en el api el erro dto de mvc, y recogerlo con WebClient"
 
