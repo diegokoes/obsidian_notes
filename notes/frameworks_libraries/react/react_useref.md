@@ -1,4 +1,4 @@
-# react > useRef
+# REACT > USEREF
 
 ## SUMMARY
 > [!summary]
@@ -18,17 +18,4 @@ id intervals, id popups
 
 Where to change it -> 
 
-> [!danger] TO AVOID
-
-
-## QUESTIONS
-
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
 

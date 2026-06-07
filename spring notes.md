@@ -147,6 +147,11 @@ para accedder a clases de utilidades
 **MVCCONFIG SÓLO LAS PÁGINAS SIN LOGICA; ESTÁTICAS, SI HAY CONTROLLER PARA ESA RUTA, SE QUITA DEL MVC CONFIG** 
 
 :redirect:/restaurants ... //TODO 
+
+
+```xml
+<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-thymeleaf</artifactId> </dependency> <dependency> <groupId>org.thymeleaf.extras</groupId> <artifactId>thymeleaf-extras-springsecurity6</artifactId> </dependency> <dependency> <groupId>org.thymeleaf.extras</groupId> <artifactId>thymeleaf-extras-springsecurity6</artifactId> </dependency>
+```
 ## SESSION
 
 /TODO
@@ -274,3 +279,25 @@ JPA specifications? más avanzada //TODO
 
 // webclient -> on status PENDIENTE , con el error dto, devolver en el api el erro dto de mvc, y recogerlo con WebClient"
 
+- - - 
+### POST NAVIDAD
+
+práctica guiada para exponer endpoints 
+- swagger + hateoas
+- programación orientada a aspectos
+- rest repositories
+
+Spring datarest, no saca id's  por defecto - ¿cómo se configura? 
+
+en jpql queries, el cast para string 
+
+enum directamente en el dto?  - > parsea json ?? llevan cadenas de texto, no enumerados !  mirar 13-01 
+
+el JOIN FETCH **no entra** en el examen!! Todos los entities usábamos lazy. 
+
+dto's dentro de jpql? **record**   **NO HAY RIGHT JOINS** 
+
+spring data rest -> totalmente publico. seguridad en MVC, autenticación
+sessionscope 
+
+quizá haya que tocar al pom

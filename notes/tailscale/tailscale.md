@@ -1,6 +1,0 @@
-# TAILSCALE > 
-## SUMMARY
-> [!summary]
-> 
-## THEORY
-

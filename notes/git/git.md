@@ -13,6 +13,7 @@
 
 
 - [[git_commands|Commands Cheatsheet]]
+- [[git_ide|Git in IDE's]]
 - [[git_basics|Basics]] - Git initialization, configuration, and fundamental workflow
 - [[git_branching|Branching]] - Creating, managing, and merging branches
 - [[git_remote|Remote Repositories]] - Working with remote repositories (GitHub, GitLab, etc.)

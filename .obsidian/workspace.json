@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "16f06b9a6cee4711",
+        "id": "dc541880c93d08ca",
         "type": "tabs",
         "children": [
           {
-            "id": "f0a7848480ee573b",
+            "id": "df3440b0e5199d89",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -37,12 +37,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "parallax_sources.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of parallax_sources"
             }
           }
         ]
@@ -58,6 +59,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "parallax_sources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -67,14 +69,15 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for parallax_sources"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
   },
   "right": {
     "id": "52365d8cf2e0fd6b",
@@ -128,33 +131,37 @@
       "templater-obsidian:Templater": true
     }
   },
-  "active": "f0a7848480ee573b",
+  "active": "df3440b0e5199d89",
   "lastOpenFiles": [
-    "concepts_mojibake.md",
-    "Assets/Pasted image 20251229181553.png",
-    "notes/frameworks_libraries/angular/angular_forms.md",
-    "notes/frameworks_libraries/angular/angular.md",
-    "notes/frameworks_libraries/angular/angular_routing.md",
     "spring notes.md",
-    "notes/programming_languages/python/Python.md",
-    "notes/concepts/concepts_.md",
-    "CLIENTE.md",
+    "README.md",
     "nodejs_npm.md",
-    "notes/concepts/concepts_package_manager.md",
-    "notes/nodejs/nodejs_version_managers.md",
-    "notes/nodejs/nodejs.md",
-    "notes/nodejs/nodejs_setup.md",
-    "notes/frameworks_libraries/spring/spring_.md",
-    "notes/frameworks_libraries/spring/spring_rest_api_controller.md",
-    "notes/frameworks_libraries/spring/spring_repository.md",
-    "notes/frameworks_libraries/spring/spring_mvc_controller.md",
-    "notes/frameworks_libraries/spring/spring_dto.md",
-    "notes/frameworks_libraries/spring/spring_entity.md",
-    "notes/frameworks_libraries/spring/spring.md",
-    "notes/frameworks_libraries/spring/spring_configuration.md",
+    "parallax_sources.md",
+    "Note_.md",
+    "metacourse.md",
+    "docker.md",
+    "events.md",
+    "concepts_mojibake.md",
+    "cris_servidor.md",
+    "f1.md",
+    "notes/pom.xml.md",
+    "notes/instalacion_configuracion_express.md",
+    "notes/sass/SASS.md",
+    "notes/projects/projects_.md",
+    "notes/math",
+    "CLIENTE.md",
+    "notes/ideas.md",
+    "screaming_architecture.md",
+    "parallax_docs.md",
+    "notes/concepts/concepts_architecture_pattern.md",
+    "notes/css/CSS.md",
+    "notes/config/config_iptables.md",
+    "tfg.md",
+    "notes/git/git_ide.md",
+    "notes/git/git.md",
+    "nNote_.md",
+    "Assets/Pasted image 20251229181553.png",
     "Assets/Pasted image 20251201130403.png",
-    "notes/frameworks_libraries/spring/spring_security.md",
-    "notes/frameworks_libraries/spring/spring_exceptions.md",
     "Assets/Pasted image 20251128174546.png",
     "Assets/Pasted image 20251123215249.png",
     "Assets/Pasted image 20251122152600.png",
@@ -172,7 +179,6 @@
     "notes/frameworks_libraries",
     "notes/programming_languages",
     "dump/hyprland",
-    "notes/tailscale",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas"

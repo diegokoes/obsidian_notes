@@ -726,7 +726,7 @@ public class Role {
 
 > [!warning] Throws MethodArgumentNotValidException
 
-## INDEX
+## I!!!NDEX
 - [[spring_configuration|Configuration]]
 - [[spring_entity|Entity]]
 - [[spring_dto|DTO]]
@@ -739,3 +739,103 @@ public class Role {
 - [[spring_lombok|Lombok]]
 - [[spring_security|Security]]
 - [[spring_mapstruck|Mapstruck]]
+
+
+flash attributes
+
+fragments
+
+
+pagination
+- De page a un DTO genérico, en el service en .bodyToMono(new ParameterizedTypeReference<PageResponse<DishResponseDTO>>(){})
+uriBuilder...
+
+
+onSatus....
+
+@Embeddable
+
+clave @EmbeddedId, no @Id
+
+package es.daw.foodexpressapi.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "order_details")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderDetail {
+
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+
+    @EmbeddedId
+    private OrderDetailId orderDetailId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("orderId")
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("dishId")
+    @JoinColumn(name = "dish_id")
+    private Dish dish;
+
+    private Integer quantity;
+
+    private BigDecimal subtotal;
+
+
+}
+
+package es.daw.foodexpressapi.entity;
+
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Embeddable
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class OrderDetailId implements Serializable {
+    private Long orderId;
+    private Long dishId;
+}
+
+
+### BINDING ERSULTS
+
+result.rejectValue
+
+### I18N
+
+@Transactional
+
+@RepositoryRestResource(path = "...")
+
+### ENUMERATED
+
+en un entity? 
+@Enumerated(EnumType.STRING)
+... 
+métodos propios
+
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm"
+LocalDateTime
