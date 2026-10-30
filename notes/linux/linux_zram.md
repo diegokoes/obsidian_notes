@@ -1,4 +1,0 @@
-# LINUX > ZRAM
-
-
-

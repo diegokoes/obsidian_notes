@@ -1,0 +1,8 @@
+---
+up:
+  - "[[linux]]"
+---
+# LINUX > ZRAM
+
+
+

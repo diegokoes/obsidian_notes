@@ -1,0 +1,7 @@
+---
+up:
+  - "[[nextjs]]"
+---
+# NEXTJS > INSTALLATION
+
+

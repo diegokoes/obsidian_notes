@@ -1,3 +1,0 @@
-# NEXTJS > INSTALLATION
-
-

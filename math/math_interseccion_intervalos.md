@@ -1,0 +1,8 @@
+---
+up:
+  - "[[math]]"
+---
+# MATH > INTERSECCIÓN DE INTERVALOS
+
+
+![[Pasted image 20261004195211.png]]![[Pasted image 20261004195646.png]]

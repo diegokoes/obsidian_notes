@@ -1,0 +1,8 @@
+---
+up:
+  - "[[concepts]]"
+---
+# CONCEPTS > RENDERING STRATEGIES > CLIENT SIDE RENDERING
+## SUMMARY
+> [!summary]
+> 
