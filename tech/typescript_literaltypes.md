@@ -152,43 +152,42 @@ Cuando se inicializa un objeto, TypeScript infiere tipos generales (como `string
 - - -
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué son los Literal Types en TypeScript?**  
-> Son tipos que limitan una variable a un conjunto específico de valores permitidos.  
->
->```typescript
->let estado: "activo" | "inactivo";
->estado = "activo"; // OK
->estado = "pendiente"; // Error
->```
+¿Qué son los Literal Types en TypeScript?
+?
+Son tipos que limitan una variable a un conjunto específico de valores permitidos.
+```typescript
+let estado: "activo" | "inactivo";
+estado = "activo"; // OK
+estado = "pendiente"; // Error
+```
 
->[!question]- **¿Cómo se combinan los Literal Types con Union Types?**  
-> Permiten limitar los valores aceptados en funciones o variables.  
->
->```typescript
->function mover(direccion: "izquierda" | "derecha") {
->  console.log(`Moviendo hacia: ${direccion}`);
->}
->mover("izquierda"); // OK
->mover("arriba");    // Error
->```
+¿Cómo se combinan los Literal Types con Union Types?
+?
+Permiten limitar los valores aceptados en funciones o variables.
+```typescript
+function mover(direccion: "izquierda" | "derecha") {
+console.log(`Moviendo hacia: ${direccion}`);
+}
+mover("izquierda"); // OK
+mover("arriba");    // Error
+```
 
->[!warning]- **¿Qué sucede con la inferencia en objetos inicializados?**  
-> TypeScript infiere tipos generales (`string`, `number`) en lugar de tipos literales. Esto puede ajustarse con `as const` o type assertions.  
->
->```typescript
->const obj = { metodo: "GET" } as const; // Ahora, "GET" es literal
->```
+¿Qué sucede con la inferencia en objetos inicializados?
+?
+TypeScript infiere tipos generales (`string`, `number`) en lugar de tipos literales. Esto puede ajustarse con `as const` o type assertions.
+```typescript
+const obj = { metodo: "GET" } as const; // Ahora, "GET" es literal
+```
 
->[!danger]- **¿Qué problemas pueden surgir al omitir `as const` en objetos?**  
-> Las propiedades del objeto pueden ser tratadas como tipos generales, lo que puede causar errores si se espera un tipo literal.  
->
->```typescript
->const obj = { metodo: "GET" }; // `metodo` es `string`, no `"GET"`
->function manejar(metodo: "GET" | "POST") {}
->manejar(obj.metodo); // Error
->```
->
+¿Qué problemas pueden surgir al omitir `as const` en objetos?
+?
+Las propiedades del objeto pueden ser tratadas como tipos generales, lo que puede causar errores si se espera un tipo literal.
+```typescript
+const obj = { metodo: "GET" }; // `metodo` es `string`, no `"GET"`
+function manejar(metodo: "GET" | "POST") {}
+manejar(obj.metodo); // Error
+```
+
 - - -
-
-

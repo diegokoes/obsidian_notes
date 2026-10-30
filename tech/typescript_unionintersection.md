@@ -81,40 +81,46 @@ Permiten combinar múltiples tipos, exigiendo que una variable cumpla con las ca
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué es un Union Type en TypeScript?**  
-> Es una combinación de tipos que permite que una variable tenga más de un tipo posible.  
-> ```typescript
-> let valor: string | number;
-> valor = "Texto"; // Válido
-> valor = 42;      // También válido
-> ```
+¿Qué es un Union Type en TypeScript?
+?
+Es una combinación de tipos que permite que una variable tenga más de un tipo posible.
+```typescript
+let valor: string | number;
+valor = "Texto"; // Válido
+valor = 42;      // También válido
+```
 
->[!question]- **¿Qué diferencia hay entre Union y Intersection Types?**  
-> - **Union (`|`)**: Una variable puede ser de uno u otro tipo.  
-> - **Intersection (`&`)**: Una variable debe cumplir con ambos tipos.  
-> ```typescript
-> type A = { a: string };
-> type B = { b: number };
-> let union: A | B = { a: "Texto" }; // Correcto con A
-> let interseccion: A & B = { a: "Texto", b: 42 }; // Correcto con ambos
-> ```
+¿Qué diferencia hay entre Union y Intersection Types?
+?
+- **Union (`|`)**: Una variable puede ser de uno u otro tipo.
+- **Intersection (`&`)**: Una variable debe cumplir con ambos tipos.
+```typescript
+type A = { a: string };
+type B = { b: number };
+let union: A | B = { a: "Texto" }; // Correcto con A
+let interseccion: A & B = { a: "Texto", b: 42 }; // Correcto con ambos
+```
 
->[!warning]- **¿Qué sucede si usas propiedades que no están en todos los tipos en un Union?**  
-> TypeScript solo permite acceder a las propiedades comunes entre los tipos.  
-> ```typescript
-> type A = { a: string };
-> type B = { b: number };
-> let union: A | B = { a: "Texto" };
-> console.log(union.a); // OK
-> console.log(union.b); // Error
-> ```
+¿Qué sucede si usas propiedades que no están en todos los tipos en un Union?
+?
+TypeScript solo permite acceder a las propiedades comunes entre los tipos.
+```typescript
+type A = { a: string };
+type B = { b: number };
+let union: A | B = { a: "Texto" };
+console.log(union.a); // OK
+console.log(union.b); // Error
+```
 
->[!danger]- **¿Cuándo usar Intersection Types sobre Union Types?**  
-> Usa Intersection Types cuando necesites una combinación estricta de tipos (ambos deben cumplirse).  
-> ```typescript
-> type Persona = { nombre: string; };
-> type Empleado = { salario: number; };
-> let trabajador: Persona & Empleado = { nombre: "Ana", salario: 4000 }; // Necesita ambas propiedades
-> ```
+¿Cuándo usar Intersection Types sobre Union Types?
+?
+Usa Intersection Types cuando necesites una combinación estricta de tipos (ambos deben cumplirse).
+```typescript
+type Persona = { nombre: string; };
+type Empleado = { salario: number; };
+let trabajador: Persona & Empleado = { nombre: "Ana", salario: 4000 }; // Necesita ambas propiedades
+```
+
 - - - 

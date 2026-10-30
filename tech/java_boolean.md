@@ -30,4 +30,5 @@ Java doesn't allow direct int to boolean casts. You must use explicit comparison
 What's the difference between boolean primitive and Boolean wrapper class?
 ?
 The primitive can only be true/false while the wrapper is an object that can be null. Boolean wrapper provides utility methods and can be used with collections.
-- - -
+
+- - - 

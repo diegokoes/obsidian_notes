@@ -12,15 +12,6 @@ inheritance can be multiple, unlike [[java_oop|java's inheritance model]]
 ## THEORY
 
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
-
 
 # OOP PRINCIPLES
 

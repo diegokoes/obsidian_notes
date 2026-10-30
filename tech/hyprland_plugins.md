@@ -168,15 +168,18 @@ hyprctl keyword plugin ""
 ```
 
 ## QUESTIONS
+#flashcards/hyprland
 
-> [!tip]- How do I find available plugins?
-> Check the Hyprland community, GitHub, or the official plugins repository
+How do I find available plugins?
+?
+Check the Hyprland community, GitHub, or the official plugins repository
 
-> [!warning]- Are plugins safe to use?
-> Only install plugins from trusted sources. Plugins have full system access and can potentially cause security issues.
+Are plugins safe to use?
+?
+Only install plugins from trusted sources. Plugins have full system access and can potentially cause security issues.
 
-> [!danger]- A plugin crashed Hyprland, what do I do?
-> Remove the problematic plugin from your config and restart Hyprland. You can disable plugins with `hyprctl keyword plugin ""`
+A plugin crashed Hyprland, what do I do?
+?
+Remove the problematic plugin from your config and restart Hyprland. You can disable plugins with `hyprctl keyword plugin ""`
 
 - - -
-

@@ -75,62 +75,58 @@ result = function(*values)  # Unpacks list into positional arguments
 - Harder to enforce required parameters when using `**kwargs`
 
 ## QUESTIONS
-> [!tip]- What's the difference between *args and **kwargs?
-> `*args` collects excess positional arguments into a tuple, while `**kwargs` collects excess keyword arguments into a dictionary. 
-> 
-> ```python
-> def example(*args, **kwargs):
->     print(f"args: {args}, type: {type(args)}")
->     print(f"kwargs: {kwargs}, type: {type(kwargs)}")
->
-> example(1, 2, 3, name="John", age=30)
-> # Output:
-> # args: (1, 2, 3), type: <class 'tuple'>
-> # kwargs: {'name': 'John', 'age': 30}, type: <class 'dict'>
-> ```
+#flashcards/python
 
-> [!warning]- How can you define a function that accepts both required parameters and variable arguments?
-> You can combine required parameters with `*args` and `**kwargs`, but the order matters:
-> 1. Required positional parameters come first
-> 2. Then `*args` for variable positional arguments
-> 3. Then parameters with default values
-> 4. Finally `**kwargs` for variable keyword arguments
->
-> ```python
-> def complex_function(required1, required2, *args, default1="default", default2=42, **kwargs):
->     print(f"Required: {required1}, {required2}")
->     print(f"Variable positional: {args}")
->     print(f"Defaults: {default1}, {default2}")
->     print(f"Variable keyword: {kwargs}")
->
-> complex_function("must", "have", 1, 2, 3, default1="custom", extra="value")
-> ```
+What's the difference between *args and **kwargs?
+?
+`*args` collects excess positional arguments into a tuple, while `**kwargs` collects excess keyword arguments into a dictionary.
+```python
+def example(*args, **kwargs):
+print(f"args: {args}, type: {type(args)}")
+print(f"kwargs: {kwargs}, type: {type(kwargs)}")
+example(1, 2, 3, name="John", age=30)
+# Output:
+# args: (1, 2, 3), type: <class 'tuple'>
+# kwargs: {'name': 'John', 'age': 30}, type: <class 'dict'>
+```
 
-> [!danger]- How would you implement a decorator that can handle any function regardless of its signature?
-> A decorator that preserves the original function signature requires `*args` and `**kwargs` along with `functools.wraps`:
->
-> ```python
-> from functools import wraps
-> import time
->
-> def timing_decorator(func):
->     @wraps(func)  # Preserves metadata of the original function
->     def wrapper(*args, **kwargs):
->         start_time = time.time()
->         result = func(*args, **kwargs)
->         end_time = time.time()
->         print(f"Function {func.__name__} took {end_time - start_time:.6f} seconds")
->         return result
->     return wrapper
->
-> @timing_decorator
-> def example_function(a, b, c=3):
->     time.sleep(0.1)
->     return a + b + c
->
-> # The decorator works with any function, preserving its original signature
-> result = example_function(1, 2, c=5)  # Prints timing info and returns 8
-> ```
+How can you define a function that accepts both required parameters and variable arguments?
+?
+You can combine required parameters with `*args` and `**kwargs`, but the order matters:
+1. Required positional parameters come first
+2. Then `*args` for variable positional arguments
+3. Then parameters with default values
+4. Finally `**kwargs` for variable keyword arguments
+```python
+def complex_function(required1, required2, *args, default1="default", default2=42, **kwargs):
+print(f"Required: {required1}, {required2}")
+print(f"Variable positional: {args}")
+print(f"Defaults: {default1}, {default2}")
+print(f"Variable keyword: {kwargs}")
+complex_function("must", "have", 1, 2, 3, default1="custom", extra="value")
+```
 
+How would you implement a decorator that can handle any function regardless of its signature?
+?
+A decorator that preserves the original function signature requires `*args` and `**kwargs` along with `functools.wraps`:
+```python
+from functools import wraps
+import time
+def timing_decorator(func):
+@wraps(func)  # Preserves metadata of the original function
+def wrapper(*args, **kwargs):
+start_time = time.time()
+result = func(*args, **kwargs)
+end_time = time.time()
+print(f"Function {func.__name__} took {end_time - start_time:.6f} seconds")
+return result
+return wrapper
+@timing_decorator
+def example_function(a, b, c=3):
+time.sleep(0.1)
+return a + b + c
+# The decorator works with any function, preserving its original signature
+result = example_function(1, 2, c=5)  # Prints timing info and returns 8
+```
 
 - - -

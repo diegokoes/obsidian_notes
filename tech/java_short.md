@@ -25,4 +25,5 @@ Yes, for most general-purpose arithmetic
 Overflow or underflow?
 ?
 Happens if values exceed the short range
-- - -
+
+- - - 

@@ -181,31 +181,29 @@ useEffect(() => {
 ---
 
 ## QUESTIONS
+#flashcards/react
 
-> [!danger]- **Why can't the effect function itself be async?**
-> `useEffect` expects either nothing or a cleanup function to be returned. An async function always returns a Promise, not a cleanup function. This would break React's cleanup mechanism.
->
-> ```javascript
-> // ❌ WRONG - Effect function is async (returns a Promise)
-> useEffect(async () => {
->   const response = await fetch("url");
->   const data = await response.json();
-> }, []);
->
-> // ✅ CORRECT - Effect function is sync, but calls async function inside
-> useEffect(() => {
->   const fetchData = async () => {
->     const response = await fetch("url");
->     const data = await response.json();
->   };
->   fetchData();
-> }, []);
->
-> // ✅ ALSO CORRECT - Using .then/.catch (no async needed)
-> useEffect(() => {
->   fetch("url")
->     .then(response => response.json())
->     .then(data => console.log(data));
-> }, []);
-> ```
-
+Why can't the effect function itself be async?
+?
+`useEffect` expects either nothing or a cleanup function to be returned. An async function always returns a Promise, not a cleanup function. This would break React's cleanup mechanism.
+```javascript
+// ❌ WRONG - Effect function is async (returns a Promise)
+useEffect(async () => {
+const response = await fetch("url");
+const data = await response.json();
+}, []);
+// ✅ CORRECT - Effect function is sync, but calls async function inside
+useEffect(() => {
+const fetchData = async () => {
+const response = await fetch("url");
+const data = await response.json();
+};
+fetchData();
+}, []);
+// ✅ ALSO CORRECT - Using .then/.catch (no async needed)
+useEffect(() => {
+fetch("url")
+.then(response => response.json())
+.then(data => console.log(data));
+}, []);
+```

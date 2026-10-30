@@ -30,5 +30,3 @@ public class Main {
 - Usan la anotación `@FunctionalInterface` para asegurar que cumplen con esta regla.
 - - - 
 ## QUESTIONS 
-> [!info]- Click to reveal the answer
-JavaScript is a programming language used primarily for web development.

@@ -56,35 +56,40 @@ Los parámetros opcionales pueden tener valores por defecto, lo cual mejora la l
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué son los tipos opcionales en TypeScript?**  
-> Son propiedades o parámetros que pueden omitirse sin causar errores de tipo.  
->```typescript
->interface Usuario { id: number; nombre?: string; }
->```
+¿Qué son los tipos opcionales en TypeScript?
+?
+Son propiedades o parámetros que pueden omitirse sin causar errores de tipo.
+```typescript
+interface Usuario { id: number; nombre?: string; }
+```
 
->[!warning]- **¿Cómo defines una propiedad opcional?**  
-> Usa el símbolo `?` después del nombre de la propiedad.  
->```typescript
->interface Config { tema?: string; }
->```
+¿Cómo defines una propiedad opcional?
+?
+Usa el símbolo `?` después del nombre de la propiedad.
+```typescript
+interface Config { tema?: string; }
+```
 
->[!warning]- **¿Qué sucede si intentas acceder a una propiedad opcional que no existe?**  
-> TypeScript permitirá el acceso, pero podría devolver `undefined`. Usa un operador de coalescencia nula (`??`) o validación para manejarlo.  
->```typescript
->interface Config { tema?: string; }
->const config: Config = {};
->console.log(config.tema ?? "No definido"); // "No definido"
->```
+¿Qué sucede si intentas acceder a una propiedad opcional que no existe?
+?
+TypeScript permitirá el acceso, pero podría devolver `undefined`. Usa un operador de coalescencia nula (`??`) o validación para manejarlo.
+```typescript
+interface Config { tema?: string; }
+const config: Config = {};
+console.log(config.tema ?? "No definido"); // "No definido"
+```
 
->[!danger]- **¿Qué errores pueden ocurrir con parámetros opcionales?**  
-> Si no manejas correctamente un parámetro opcional, puedes encontrarte con `undefined` en tiempo de ejecución, causando errores inesperados.  
->```typescript
->function sumar(a: number, b?: number): number {
->  return a + (b ?? 0);
->}
->console.log(sumar(5)); // 5
->console.log(sumar(5, 3)); // 8
->```
+¿Qué errores pueden ocurrir con parámetros opcionales?
+?
+Si no manejas correctamente un parámetro opcional, puedes encontrarte con `undefined` en tiempo de ejecución, causando errores inesperados.
+```typescript
+function sumar(a: number, b?: number): number {
+return a + (b ?? 0);
+}
+console.log(sumar(5)); // 5
+console.log(sumar(5, 3)); // 8
+```
 
 ---

@@ -50,14 +50,18 @@ export CLUTTER_BACKEND=wayland
 - **wofi/rofi** - Application launchers
 
 ## QUESTIONS
+#flashcards/wayland
 
-> [!tip]- How do I know if I'm running Wayland?
-> Check the `$XDG_SESSION_TYPE` environment variable or run `echo $WAYLAND_DISPLAY`
+How do I know if I'm running Wayland?
+?
+Check the `$XDG_SESSION_TYPE` environment variable or run `echo $WAYLAND_DISPLAY`
 
-> [!warning]- Are all applications compatible with Wayland?
-> Most modern applications work well. Legacy X11 apps run through XWayland compatibility layer.
+Are all applications compatible with Wayland?
+?
+Most modern applications work well. Legacy X11 apps run through XWayland compatibility layer.
 
-> [!danger]- Should I switch from X11 to Wayland?
-> Wayland is generally recommended for new setups, but X11 might be better for older hardware or specific use cases requiring X11-only features.
+Should I switch from X11 to Wayland?
+?
+Wayland is generally recommended for new setups, but X11 might be better for older hardware or specific use cases requiring X11-only features.
 
 - - -

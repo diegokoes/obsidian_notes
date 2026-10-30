@@ -19,12 +19,3 @@ https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 
 !TODO
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
-

@@ -12,19 +12,20 @@ up:
 
 - - - 
 
-### ¿CÓMO FUNCIONA .MAP()?
+#flashcards/javascript
 
-  - > [!info]- Click to reveal the answer
+¿CÓMO FUNCIONA .MAP()?
+?
 .map() itera por cada elemento del array original y ejecuta una función que defines, devolviendo un nuevo array con los resultados de esa función.
 
-### ¿MODIFICA .MAP() EL ARRAY ORIGINAL?
-
-  - > [!info]- Click to reveal the answer
+¿MODIFICA .MAP() EL ARRAY ORIGINAL?
+?
 No, .map() no cambia el array original. Siempre crea uno nuevo.
 
-### QUÉ PARÁMETROS ADMITE
-  - > [!info]- Click to reveal the answer
+QUÉ PARÁMETROS ADMITE
+?
 array.map((element, index, array) => {
- // lógica para transformar cada elemento
+// lógica para transformar cada elemento
 });
+
 - - - 

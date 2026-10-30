@@ -249,15 +249,18 @@ render {
 ```
 
 ## QUESTIONS
+#flashcards/hyprland
 
-> [!tip]- Hyprland is using too much CPU/RAM
-> Disable animations and blur effects, enable VFR, and check for problematic plugins
+Hyprland is using too much CPU/RAM
+?
+Disable animations and blur effects, enable VFR, and check for problematic plugins
 
-> [!warning]- My screen is flickering or tearing
-> Try enabling explicit sync, adjusting VRR settings, or disabling hardware cursors for NVIDIA
+My screen is flickering or tearing
+?
+Try enabling explicit sync, adjusting VRR settings, or disabling hardware cursors for NVIDIA
 
-> [!danger]- Hyprland crashed and I can't recover
-> Switch to TTY (Ctrl+Alt+F2), restore a backup config, or use a minimal configuration to get back to a working state
+Hyprland crashed and I can't recover
+?
+Switch to TTY (Ctrl+Alt+F2), restore a backup config, or use a minimal configuration to get back to a working state
 
 - - -
-

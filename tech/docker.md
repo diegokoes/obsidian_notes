@@ -35,8 +35,10 @@ docker-compose up -d
 ```
 
 ## QUESTIONS
+#flashcards/docker
 
-> [!tip]- When should I use Docker?
-> Use Docker for application isolation, development environment consistency, and easy deployment.
+When should I use Docker?
+?
+Use Docker for application isolation, development environment consistency, and easy deployment.
 
 - - -

@@ -73,30 +73,40 @@ HTTP/1.1 reused TCP connections with keep-alive but could only have one in-fligh
 URLs identify resources and may include a query string for selection/filtering. Query parameters are visible and easily cached/bookmarked. When sending larger or state‑changing data, use a request body (e.g., JSON for APIs or multipart for file upload). Servers should define clearly which fields go where.
 
 ## QUESTIONS
+#flashcards/concepts
 
-> [!tip]- What does “stateless” mean in HTTP?
-> The server does not retain client context between requests. Each request must carry all information needed (URL, headers, body). State usually lives on the client (cookies, tokens) or in server storage keyed by a session identifier—HTTP semantics remain stateless.
+What does “stateless” mean in HTTP?
+?
+The server does not retain client context between requests. Each request must carry all information needed (URL, headers, body). State usually lives on the client (cookies, tokens) or in server storage keyed by a session identifier—HTTP semantics remain stateless.
 
-> [!tip]- Which methods are safe and which are idempotent?
-> Safe: GET, HEAD, OPTIONS, TRACE (no server state change). Idempotent: GET, HEAD, OPTIONS, PUT, DELETE (same request repeated → same effect). This matters for retries and caching behavior; POST/PATCH are not guaranteed idempotent.
+Which methods are safe and which are idempotent?
+?
+Safe: GET, HEAD, OPTIONS, TRACE (no server state change). Idempotent: GET, HEAD, OPTIONS, PUT, DELETE (same request repeated → same effect). This matters for retries and caching behavior; POST/PATCH are not guaranteed idempotent.
 
-> [!tip]- When should I use query parameters vs. a request body?
-> Query parameters are for identification/filtering and are visible/bookmarkable; bodies (POST/PUT/PATCH) carry larger or state-changing data. Query length limits are implementation-dependent; bodies avoid those limits and can be structured (JSON, multipart, forms).
+When should I use query parameters vs. a request body?
+?
+Query parameters are for identification/filtering and are visible/bookmarkable; bodies (POST/PUT/PATCH) carry larger or state-changing data. Query length limits are implementation-dependent; bodies avoid those limits and can be structured (JSON, multipart, forms).
 
-> [!warning]- How do HTTP/1.1, HTTP/2, and HTTP/3 differ?
-> HTTP/1.1 is text-based with no multiplexing (keep-alive helps reuse). HTTP/2 adds binary framing, multiplexing, and HPACK header compression over TCP. HTTP/3 runs over QUIC/UDP, integrating TLS 1.3 and avoiding TCP head‑of‑line blocking.
+How do HTTP/1.1, HTTP/2, and HTTP/3 differ?
+?
+HTTP/1.1 is text-based with no multiplexing (keep-alive helps reuse). HTTP/2 adds binary framing, multiplexing, and HPACK header compression over TCP. HTTP/3 runs over QUIC/UDP, integrating TLS 1.3 and avoiding TCP head‑of‑line blocking.
 
-> [!warning]- ETag vs. Last-Modified for cache validation?
-> ETag is an opaque content fingerprint—precise even if timestamps don’t change; Last-Modified is a timestamp with coarse granularity and clock issues. Many servers send both; clients can use If-None-Match or If-Modified-Since to get 304 Not Modified.
+ETag vs. Last-Modified for cache validation?
+?
+ETag is an opaque content fingerprint—precise even if timestamps don’t change; Last-Modified is a timestamp with coarse granularity and clock issues. Many servers send both; clients can use If-None-Match or If-Modified-Since to get 304 Not Modified.
 
-> [!warning]- 301/302 vs. 307/308 redirects—what’s the difference?
-> 301/302 may change the method to GET in some clients; 307/308 preserve the original method and body. Prefer 308 for permanent redirects that must keep the method; use 307 for temporary ones.
+301/302 vs. 307/308 redirects—what’s the difference?
+?
+301/302 may change the method to GET in some clients; 307/308 preserve the original method and body. Prefer 308 for permanent redirects that must keep the method; use 307 for temporary ones.
 
-> [!danger]- How do Cache-Control and Vary affect CDNs and proxies?
-> Cache-Control (max-age, s-maxage, private/public, must-revalidate, stale-while-revalidate) governs freshness. Vary alters the cache key (e.g., Vary: Accept-Encoding, Accept-Language). Misuse can cause cache misses or leaks across user variants.
+How do Cache-Control and Vary affect CDNs and proxies?
+?
+Cache-Control (max-age, s-maxage, private/public, must-revalidate, stale-while-revalidate) governs freshness. Vary alters the cache key (e.g., Vary: Accept-Encoding, Accept-Language). Misuse can cause cache misses or leaks across user variants.
 
-> [!danger]- How do [[concepts_sop|SOP]] and [[concepts_cors|CORS]] interact?
-> SOP limits a page’s access to resources from other origins. CORS opts a server into allowing cross-origin requests via headers (Access-Control-Allow-*). Credentialed requests require Allow-Credentials: true and cannot use wildcard origins.
+How do [[concepts_sop|SOP]] and [[concepts_cors|CORS]] interact?
+?
+SOP limits a page’s access to resources from other origins. CORS opts a server into allowing cross-origin requests via headers (Access-Control-Allow-*). Credentialed requests require Allow-Credentials: true and cannot use wildcard origins.
 
-> [!danger]- Why use [[concepts_https|HTTPS]] even for “non‑sensitive” content?
-> It prevents tampering/injection, hides URLs/queries from intermediaries, thwarts passive tracking, and enables modern features (Service Workers, HTTP/2/3). Mixed content risks are eliminated when everything is served over HTTPS.
+Why use [[concepts_https|HTTPS]] even for “non‑sensitive” content?
+?
+It prevents tampering/injection, hides URLs/queries from intermediaries, thwarts passive tracking, and enables modern features (Service Workers, HTTP/2/3). Mixed content risks are eliminated when everything is served over HTTPS.

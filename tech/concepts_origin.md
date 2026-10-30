@@ -38,12 +38,3 @@ These are not same origin because they use different ports:
 - `http://example.com`
 - `http://example.com:8080`
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
-

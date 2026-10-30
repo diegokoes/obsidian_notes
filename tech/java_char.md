@@ -25,4 +25,5 @@ Yes, char supports Unicode up to 65535
 Conversions?
 ?
 Casting char to int yields its numeric code
-- - -
+
+- - - 

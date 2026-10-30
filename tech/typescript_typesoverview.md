@@ -76,38 +76,41 @@ window.onmousedown = function (mouseEvent) {
 ```
 
 ## QUESTIONS
->
-> [!tip]- What is a type annotation in TypeScript?
-> A type annotation is an explicit way to specify the data type of a variable, function parameter, or return value.
->
-> ```typescript
-> let userName: string = "Alice"; // Explicitly typed as string
-> ```
+#flashcards/typescript
 
-> [!warning]- What happens if you assign the wrong type to a variable in TypeScript?
-> The TypeScript compiler will show an error at compile time, preventing the code from compiling successfully.
 >
-> ```typescript
-> let age: number = "30";
+
+What is a type annotation in TypeScript?
+?
+A type annotation is an explicit way to specify the data type of a variable, function parameter, or return value.
+```typescript
+let userName: string = "Alice"; // Explicitly typed as string
+```
+
+What happens if you assign the wrong type to a variable in TypeScript?
+?
+The TypeScript compiler will show an error at compile time, preventing the code from compiling successfully.
+```typescript
+let age: number = "30";
 // Error: Type 'string' is not assignable to type 'number'
->
->```
+```
 
-> [!warning]- How does TypeScript’s structural typing work?
-> Instead of matching types by name, TypeScript compares the shape of the objects or interfaces. If they match structurally, they are considered compatible.
+How does TypeScript’s structural typing work?
+?
+Instead of matching types by name, TypeScript compares the shape of the objects or interfaces. If they match structurally, they are considered compatible.
 
-> [!danger]- How can you use custom types to define complex structures?
-> By using `type` or `interface`, you can create specific shapes for complex objects, ensuring consistent usage throughout your codebase.
->
->```typescript
->type Order = {
-  id: string;
-  total: number;
-  items: string[];
+How can you use custom types to define complex structures?
+?
+By using `type` or `interface`, you can create specific shapes for complex objects, ensuring consistent usage throughout your codebase.
+```typescript
+type Order = {
+id: string;
+total: number;
+items: string[];
 };
->let newOrder: Order = { id: "abc123", total: 99, items: ["item1", "item2"] };
->
->```
->
+let newOrder: Order = { id: "abc123", total: 99, items: ["item1", "item2"] };
+```
+
 - - -
+
 # TYPESCRIPT

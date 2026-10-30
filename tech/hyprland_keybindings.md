@@ -153,15 +153,18 @@ bind = $mod CTRL SHIFT, R, exec, hyprctl reload
 ```
 
 ## QUESTIONS
+#flashcards/hyprland
 
-> [!tip]- How do I create custom keybindings?
-> Add `bind = MODIFIERS, KEY, DISPATCHER, PARAMS` lines to your hyprland.conf file
+How do I create custom keybindings?
+?
+Add `bind = MODIFIERS, KEY, DISPATCHER, PARAMS` lines to your hyprland.conf file
 
-> [!warning]- My keybindings aren't working
-> Check for conflicts with existing bindings and ensure proper syntax. Use `hyprctl reload` after changes.
+My keybindings aren't working
+?
+Check for conflicts with existing bindings and ensure proper syntax. Use `hyprctl reload` after changes.
 
-> [!danger]- I bound something wrong and can't use Hyprland
-> Switch to a TTY (Ctrl+Alt+F2) and edit your config file, or delete problematic lines
+I bound something wrong and can't use Hyprland
+?
+Switch to a TTY (Ctrl+Alt+F2) and edit your config file, or delete problematic lines
 
 - - -
-

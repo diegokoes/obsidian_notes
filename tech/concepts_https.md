@@ -36,30 +36,40 @@ ALPN negotiates the HTTP layer (h2 or h3) during the handshake. HTTP/2 over TLS 
 Use ACME (e.g., Let’s Encrypt) to obtain and auto‑renew certificates (short lifetimes like 90 days). Prefer modern settings: TLS 1.2/1.3, AEAD ciphers (AES‑GCM/ChaCha20‑Poly1305), ECDSA keys where compatible, OCSP stapling on. For internal services, operate a private CA and consider mTLS.
 
 ## QUESTIONS
+#flashcards/concepts
 
-> [!tip]- What does HTTPS add over HTTP?
-> Confidentiality (encryption), integrity (tamper detection), and server authentication (PKI). Optionally client authentication (mTLS). It doesn’t protect against malware on endpoints or compromised servers.
+What does HTTPS add over HTTP?
+?
+Confidentiality (encryption), integrity (tamper detection), and server authentication (PKI). Optionally client authentication (mTLS). It doesn’t protect against malware on endpoints or compromised servers.
 
-> [!tip]- How does TLS 1.3 improve latency and security?
-> Fewer round trips (0-RTT/1-RTT handshakes), removal of legacy ciphers, mandatory forward secrecy via (EC)DHE, and simpler negotiation; results in faster and safer connections.
+How does TLS 1.3 improve latency and security?
+?
+Fewer round trips (0-RTT/1-RTT handshakes), removal of legacy ciphers, mandatory forward secrecy via (EC)DHE, and simpler negotiation; results in faster and safer connections.
 
-> [!warning]- How do SNI and ALPN help?
-> SNI lets multiple certificates/hosts share an IP by indicating the hostname in the ClientHello. ALPN negotiates the application protocol (e.g., h2, h3) during TLS, avoiding extra round trips.
+How do SNI and ALPN help?
+?
+SNI lets multiple certificates/hosts share an IP by indicating the hostname in the ClientHello. ALPN negotiates the application protocol (e.g., h2, h3) during TLS, avoiding extra round trips.
 
-> [!warning]- When should I use mTLS?
-> Use for service-to-service auth or high-security B2B scenarios. Manage client certs via a private CA, short lifetimes, automated issuance/rotation, and revocation (CRL/OCSP).
+When should I use mTLS?
+?
+Use for service-to-service auth or high-security B2B scenarios. Manage client certs via a private CA, short lifetimes, automated issuance/rotation, and revocation (CRL/OCSP).
 
-> [!warning]- What does HSTS do and what about preload?
-> HSTS forces HTTPS for a host for a duration; prevents downgrade/stripping. Preload ships the policy in browsers—powerful but risky if misconfigured (can lock out HTTP accidentally).
+What does HSTS do and what about preload?
+?
+HSTS forces HTTPS for a host for a duration; prevents downgrade/stripping. Preload ships the policy in browsers—powerful but risky if misconfigured (can lock out HTTP accidentally).
 
-> [!danger]- How do OCSP stapling and CT logs help?
-> OCSP stapling provides fresh revocation status with the handshake, improving privacy and reliability. Certificate Transparency logs make mis-issuance detectable; many clients require SCTs.
+How do OCSP stapling and CT logs help?
+?
+OCSP stapling provides fresh revocation status with the handshake, improving privacy and reliability. Certificate Transparency logs make mis-issuance detectable; many clients require SCTs.
 
-> [!danger]- What is mixed content and how to fix it?
-> Loading HTTP resources on an HTTPS page; browsers block or warn. Fix by serving all subresources over HTTPS or upgrading URLs (use protocol-relative or https:// explicitly).
+What is mixed content and how to fix it?
+?
+Loading HTTP resources on an HTTPS page; browsers block or warn. Fix by serving all subresources over HTTPS or upgrading URLs (use protocol-relative or https:// explicitly).
 
-> [!danger]- Key/cipher/cert best practices?
-> Use TLS 1.2/1.3 only, prefer ECDSA with P-256, enable AEAD ciphers (AES-GCM/ChaCha20-Poly1305), rotate certs ~90 days (ACME), enable OCSP stapling, and strong DH params.
+Key/cipher/cert best practices?
+?
+Use TLS 1.2/1.3 only, prefer ECDSA with P-256, enable AEAD ciphers (AES-GCM/ChaCha20-Poly1305), rotate certs ~90 days (ACME), enable OCSP stapling, and strong DH params.
 
-> [!danger]- How do CDNs handle TLS to origin?
-> They terminate TLS at the edge and may re-encrypt to the origin (origin pull TLS) or use private networking. Ensure origin cert validation and SNI; avoid "Flexible" modes that leave origin in clear.
+How do CDNs handle TLS to origin?
+?
+They terminate TLS at the edge and may re-encrypt to the origin (origin pull TLS) or use private networking. Ensure origin cert validation and SNI; avoid "Flexible" modes that leave origin in clear.

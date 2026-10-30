@@ -18,16 +18,7 @@ up:
 ## THEORY
 
 ## QUESTIONS
->
-> [!tip]- Question
-> Answer
 
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer.
->
 ## ##  **PREGUNTAS Y RESPUESTAS**
 
 1. **¿Cómo funciona una MPA?**

@@ -273,15 +273,18 @@ pavucontrol
 ```
 
 ## QUESTIONS
+#flashcards/wayland
 
-> [!tip]- Which screenshot tool should I use?
-> Use grim + slurp for basic screenshots, add swappy for annotation features
+Which screenshot tool should I use?
+?
+Use grim + slurp for basic screenshots, add swappy for annotation features
 
-> [!warning]- Some GUI apps don't work properly
-> Make sure you have XDG portals installed: `xdg-desktop-portal-wlr` or `xdg-desktop-portal-hyprland`
+Some GUI apps don't work properly
+?
+Make sure you have XDG portals installed: `xdg-desktop-portal-wlr` or `xdg-desktop-portal-hyprland`
 
-> [!danger]- X11 applications look blurry or don't scale properly
-> Set proper scaling with `xrandr --dpi 96` or configure XWayland scaling in your compositor
+X11 applications look blurry or don't scale properly
+?
+Set proper scaling with `xrandr --dpi 96` or configure XWayland scaling in your compositor
 
 - - -
-

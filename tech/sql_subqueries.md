@@ -14,31 +14,35 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué es una subconsulta?**  
-> Es una consulta anidada dentro de otra consulta.  
-> ```sql
-> SELECT nombre 
-> FROM empleados 
-> WHERE dept_no = (SELECT dept_no FROM departamentos WHERE nombre = 'Ventas');
-> ```
+¿Qué es una subconsulta?
+?
+Es una consulta anidada dentro de otra consulta.
+```sql
+SELECT nombre
+FROM empleados
+WHERE dept_no = (SELECT dept_no FROM departamentos WHERE nombre = 'Ventas');
+```
 
->[!question]- **¿Qué hace IN en una subconsulta?**  
-> Verifica si un valor está en el conjunto devuelto por la subconsulta.  
-> ```sql
-> SELECT nombre 
-> FROM empleados 
-> WHERE dept_no IN (SELECT dept_no FROM departamentos WHERE ciudad = 'Madrid');
-> ```
+¿Qué hace IN en una subconsulta?
+?
+Verifica si un valor está en el conjunto devuelto por la subconsulta.
+```sql
+SELECT nombre
+FROM empleados
+WHERE dept_no IN (SELECT dept_no FROM departamentos WHERE ciudad = 'Madrid');
+```
 
->[!danger]- **¿Qué diferencia hay entre subconsultas correlacionadas y no correlacionadas?**  
-> - **No correlacionadas:** No dependen de la consulta externa.  
-> - **Correlacionadas:** Dependen de valores de la consulta externa.  
-> ```sql
-> SELECT nombre 
-> FROM empleados e 
-> WHERE salario > (SELECT AVG(salario) FROM empleados WHERE dept_no = e.dept_no);
-> ```
+¿Qué diferencia hay entre subconsultas correlacionadas y no correlacionadas?
+?
+- **No correlacionadas:** No dependen de la consulta externa.
+- **Correlacionadas:** Dependen de valores de la consulta externa.
+```sql
+SELECT nombre
+FROM empleados e
+WHERE salario > (SELECT AVG(salario) FROM empleados WHERE dept_no = e.dept_no);
+```
 
 ---
 

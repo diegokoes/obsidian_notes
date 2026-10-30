@@ -9,14 +9,6 @@ up:
 ## THEORY
 
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
 ### DEFINITION
 **Official:**
 > **JSX** (JavaScript XML) es una extensión de sintaxis para JavaScript que se utiliza en React. Permite escribir código similar a HTML directamente dentro de los archivos JavaScript, lo que facilita la creación de interfaces de usuario declarativas y dinámicas.
@@ -28,20 +20,22 @@ up:
 **El código JSX es lo del return, entre paréntesis** 
 ![[Pasted image 20241115113320.png]]
 
-#### ¿CÓMO SE INTERPOLAN VALORES DINÁMICOS EN JSX?
-> [!info]- Click to reveal the answer
+#flashcards/react
+
+¿CÓMO SE INTERPOLAN VALORES DINÁMICOS EN JSX?
+?
 Se utilizan llaves `{}` dentro de JSX para insertar valores dinámicos o expresiones de JavaScript.
 
-#### **¿QUÉ LIMITACIONES TIENE JSX?**
-> [!info]- Click to reveal the answer
-JSX no soporta directamente estructuras de control como if o for; en su lugar, se utilizan expresiones JavaScript como operadores ternarios o métodos como map. 
+¿QUÉ LIMITACIONES TIENE JSX?
+?
+JSX no soporta directamente estructuras de control como if o for; en su lugar, se utilizan expresiones JavaScript como operadores ternarios o métodos como map.
 
-#### ¿CUÁNTOS ELEMENTOS HTML PUEDE DEVOLVER?
-> [!info]- Click to reveal the answer
+¿CUÁNTOS ELEMENTOS HTML PUEDE DEVOLVER?
+?
 Solo un elemento html único. Si necesitas varios, los englobas en un elemento raiz.
 
-#### ¿CÓMO HAGO UNA CONDICIONAL EN JSX?
-> [!info]- Click to reveal the answer
+¿CÓMO HAGO UNA CONDICIONAL EN JSX?
+?
 Operador ternario o && para una condicional simple. Para bucles: [[javascript_map|Map]]
 
 - - - 

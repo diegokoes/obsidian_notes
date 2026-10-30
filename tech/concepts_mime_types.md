@@ -50,26 +50,36 @@ up:
 
 
 ## QUESTIONS
+#flashcards/concepts
 
-> [!tip]- What does `application/octet-stream` mean?
-> Generic binary data (unknown or arbitrary bytes).
+What does `application/octet-stream` mean?
+?
+Generic binary data (unknown or arbitrary bytes).
 
-> [!warning]- What does the `charset` parameter do for `text/*` types?
-> It declares character encoding (e.g., UTF‑8) so text is decoded correctly.
+What does the `charset` parameter do for `text/*` types?
+?
+It declares character encoding (e.g., UTF‑8) so text is decoded correctly.
 
-> [!warning]- What is a structured syntax suffix like `+json` used for?
-> To indicate the underlying syntax, enabling generic tooling; e.g., treat `application/vnd.foo+json` as JSON.
+What is a structured syntax suffix like `+json` used for?
+?
+To indicate the underlying syntax, enabling generic tooling; e.g., treat `application/vnd.foo+json` as JSON.
 
-> [!warning]- How do `Content-Type` and `Accept` differ?
-> `Content-Type` describes the payload being sent; `Accept` lists formats the client can receive (for negotiation).
+How do `Content-Type` and `Accept` differ?
+?
+`Content-Type` describes the payload being sent; `Accept` lists formats the client can receive (for negotiation).
 
-> [!warning]- How are MIME multipart bodies separated?
-> With a unique `boundary` parameter; each part is delimited by `--boundary`.
+How are MIME multipart bodies separated?
+?
+With a unique `boundary` parameter; each part is delimited by `--boundary`.
 
-> [!warning]- How do browsers behave if `Content-Type` is missing or wrong?
-> They may sniff the type; this can be dangerous. Mitigate with accurate types and `X-Content-Type-Options: nosniff`.
+How do browsers behave if `Content-Type` is missing or wrong?
+?
+They may sniff the type; this can be dangerous. Mitigate with accurate types and `X-Content-Type-Options: nosniff`.
 
-> [!danger]- Why can serving SVGs inline be risky, and how to mitigate?
-> SVG (XML) can include scripts/active content; sanitize, set correct `Content-Type`, use CSP, consider `Content-Disposition: attachment`, and `nosniff`.
-> [!danger]- Compare `multipart/form-data` and `application/x-www-form-urlencoded`.
-> Both encode form data; `multipart/form-data` supports files/binaries via parts and boundaries, while `x-www-form-urlencoded` URL-encodes key/value pairs.
+Why can serving SVGs inline be risky, and how to mitigate?
+?
+SVG (XML) can include scripts/active content; sanitize, set correct `Content-Type`, use CSP, consider `Content-Disposition: attachment`, and `nosniff`.
+
+Compare `multipart/form-data` and `application/x-www-form-urlencoded`.
+?
+Both encode form data; `multipart/form-data` supports files/binaries via parts and boundaries, while `x-www-form-urlencoded` URL-encodes key/value pairs.

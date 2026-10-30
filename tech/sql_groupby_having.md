@@ -14,31 +14,35 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace GROUP BY en SQL?**  
-> Agrupa filas con valores comunes.  
-> ```sql
-> SELECT dept_no, AVG(salario) 
-> FROM empleados 
-> GROUP BY dept_no;
-> ```
+¿Qué hace GROUP BY en SQL?
+?
+Agrupa filas con valores comunes.
+```sql
+SELECT dept_no, AVG(salario)
+FROM empleados
+GROUP BY dept_no;
+```
 
->[!question]- **¿Cómo se combina HAVING con GROUP BY?**  
-> `HAVING` filtra los grupos creados por `GROUP BY`.  
-> ```sql
-> SELECT dept_no, AVG(salario) 
-> FROM empleados 
-> GROUP BY dept_no 
-> HAVING AVG(salario) > 50000;
-> ```
+¿Cómo se combina HAVING con GROUP BY?
+?
+`HAVING` filtra los grupos creados por `GROUP BY`.
+```sql
+SELECT dept_no, AVG(salario)
+FROM empleados
+GROUP BY dept_no
+HAVING AVG(salario) > 50000;
+```
 
->[!danger]- **¿Es obligatorio usar GROUP BY con funciones agregadas?**  
-> Sí, cuando una consulta mezcla funciones agregadas con columnas no agregadas.  
-> ```sql
-> SELECT dept_no, COUNT(*) 
-> FROM empleados 
-> GROUP BY dept_no;
-> ```
+¿Es obligatorio usar GROUP BY con funciones agregadas?
+?
+Sí, cuando una consulta mezcla funciones agregadas con columnas no agregadas.
+```sql
+SELECT dept_no, COUNT(*)
+FROM empleados
+GROUP BY dept_no;
+```
 
 ---
 

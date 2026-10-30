@@ -19,38 +19,43 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace UNION en SQL?**  
-> Combina los resultados de dos consultas eliminando duplicados.  
-> ```sql
-> SELECT nombre FROM empleados 
-> UNION 
-> SELECT nombre FROM clientes;
-> ```
+¿Qué hace UNION en SQL?
+?
+Combina los resultados de dos consultas eliminando duplicados.
+```sql
+SELECT nombre FROM empleados
+UNION
+SELECT nombre FROM clientes;
+```
 
->[!question]- **¿Qué hace UNION ALL?**  
-> Combina resultados sin eliminar duplicados.  
-> ```sql
-> SELECT nombre FROM empleados 
-> UNION ALL 
-> SELECT nombre FROM clientes;
-> ```
+¿Qué hace UNION ALL?
+?
+Combina resultados sin eliminar duplicados.
+```sql
+SELECT nombre FROM empleados
+UNION ALL
+SELECT nombre FROM clientes;
+```
 
->[!warning]- **¿Qué hace INTERSECT?**  
-> Devuelve filas comunes entre dos consultas.  
-> ```sql
-> SELECT nombre FROM empleados 
-> INTERSECT 
-> SELECT nombre FROM clientes;
-> ```
+¿Qué hace INTERSECT?
+?
+Devuelve filas comunes entre dos consultas.
+```sql
+SELECT nombre FROM empleados
+INTERSECT
+SELECT nombre FROM clientes;
+```
 
->[!danger]- **¿Qué hace EXCEPT?**  
-> Devuelve filas que están en la primera consulta pero no en la segunda.  
-> ```sql
-> SELECT nombre FROM empleados 
-> EXCEPT 
-> SELECT nombre FROM clientes;
-> ```
+¿Qué hace EXCEPT?
+?
+Devuelve filas que están en la primera consulta pero no en la segunda.
+```sql
+SELECT nombre FROM empleados
+EXCEPT
+SELECT nombre FROM clientes;
+```
 
 ---
 

@@ -66,40 +66,46 @@ Permite convertir explícitamente un tipo a otro.
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué tipos básicos existen en TypeScript?**  
-> Incluyen:
-> - `string`: Representa texto.  
-> - `number`: Representa números, enteros o decimales.  
-> - `boolean`: Representa valores de verdad (true/false).  
-> - `null` y `undefined`: Representan ausencia de valor.  
-> - `any`: Acepta cualquier tipo de valor.  
-> ```typescript
-> let texto: string = "Hola";
-> let numero: number = 42;
-> let activo: boolean = true;
-> let sinValor: undefined;
-> let algo: any = "Puede ser cualquier cosa";
-> ```
+¿Qué tipos básicos existen en TypeScript?
+?
+Incluyen:
+- `string`: Representa texto.
+- `number`: Representa números, enteros o decimales.
+- `boolean`: Representa valores de verdad (true/false).
+- `null` y `undefined`: Representan ausencia de valor.
+- `any`: Acepta cualquier tipo de valor.
+```typescript
+let texto: string = "Hola";
+let numero: number = 42;
+let activo: boolean = true;
+let sinValor: undefined;
+let algo: any = "Puede ser cualquier cosa";
+```
 
->[!question]- **¿Qué diferencia hay entre `null` y `undefined`?**  
-> - `null`: Representa la ausencia intencionada de un valor.  
-> - `undefined`: Representa una variable que aún no ha sido inicializada.  
-> ```typescript
-> let sinDefinir: undefined;
-> let vacio: null = null;
-> ```
+¿Qué diferencia hay entre `null` y `undefined`?
+?
+- `null`: Representa la ausencia intencionada de un valor.
+- `undefined`: Representa una variable que aún no ha sido inicializada.
+```typescript
+let sinDefinir: undefined;
+let vacio: null = null;
+```
 
->[!warning]- **¿Qué pasa si no defines un tipo explícito?**  
-> TypeScript intentará inferir el tipo basado en el valor asignado.  
-> ```typescript
-> let numero = 30; // Infierido como number
-> ```
+¿Qué pasa si no defines un tipo explícito?
+?
+TypeScript intentará inferir el tipo basado en el valor asignado.
+```typescript
+let numero = 30; // Infierido como number
+```
 
->[!danger]- **¿Qué problemas puede causar el tipo `any`?**  
-> `any` desactiva el sistema de tipos, permitiendo valores incorrectos. Usarlo indiscriminadamente puede llevar a errores en tiempo de ejecución.  
-> ```typescript
-> let algo: any = "Texto";
-> algo = 42; // Permitido, pero puede ser problemático
-> ```
+¿Qué problemas puede causar el tipo `any`?
+?
+`any` desactiva el sistema de tipos, permitiendo valores incorrectos. Usarlo indiscriminadamente puede llevar a errores en tiempo de ejecución.
+```typescript
+let algo: any = "Texto";
+algo = 42; // Permitido, pero puede ser problemático
+```
+
 - - - 

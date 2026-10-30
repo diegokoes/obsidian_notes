@@ -42,11 +42,14 @@ fdisk /dev/disktopartition
 - Use ext4 submodule for VMs
 
 ## QUESTIONS
+#flashcards/linux
 
-> [!tip]- What's the recommended font size for installation?
-> Use `ter-132b` for better visibility during installation
+What's the recommended font size for installation?
+?
+Use `ter-132b` for better visibility during installation
 
-> [!warning]- Which file system should I use?
-> Btrfs is recommended for its advanced features like snapshots and compression
+Which file system should I use?
+?
+Btrfs is recommended for its advanced features like snapshots and compression
 
 - - -

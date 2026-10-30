@@ -14,32 +14,37 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace SYSDATE?**  
-> Devuelve la fecha y hora actuales del sistema.  
-> ```sql
-> SELECT SYSDATE AS fecha_actual FROM DUAL;
-> ```
+¿Qué hace SYSDATE?
+?
+Devuelve la fecha y hora actuales del sistema.
+```sql
+SELECT SYSDATE AS fecha_actual FROM DUAL;
+```
 
->[!question]- **¿Cómo extraer el año o mes de una fecha?**  
-> Usando `EXTRACT()`.  
-> ```sql
-> SELECT EXTRACT(YEAR FROM fecha_nacimiento) AS anio 
-> FROM empleados;
-> ```
+¿Cómo extraer el año o mes de una fecha?
+?
+Usando `EXTRACT()`.
+```sql
+SELECT EXTRACT(YEAR FROM fecha_nacimiento) AS anio
+FROM empleados;
+```
 
->[!warning]- **¿Qué hace ADD_MONTHS()?**  
-> Suma o resta meses a una fecha.  
-> ```sql
-> SELECT ADD_MONTHS(SYSDATE, 3) AS fecha_futura FROM DUAL;
-> ```
+¿Qué hace ADD_MONTHS()?
+?
+Suma o resta meses a una fecha.
+```sql
+SELECT ADD_MONTHS(SYSDATE, 3) AS fecha_futura FROM DUAL;
+```
 
->[!danger]- **¿Cómo calcular la diferencia en días entre dos fechas?**  
-> Restando las fechas directamente.  
-> ```sql
-> SELECT fecha_fin - fecha_inicio AS dias_diferencia 
-> FROM proyectos;
-> ```
+¿Cómo calcular la diferencia en días entre dos fechas?
+?
+Restando las fechas directamente.
+```sql
+SELECT fecha_fin - fecha_inicio AS dias_diferencia
+FROM proyectos;
+```
 
 ---
 

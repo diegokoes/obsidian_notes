@@ -14,31 +14,35 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué es una expresión en SELECT?**  
-> Es cualquier operación que genera un nuevo valor en la consulta.  
-> ```sql
-> SELECT salario * 1.10 AS salario_con_aumento 
-> FROM empleados;
-> ```
+¿Qué es una expresión en SELECT?
+?
+Es cualquier operación que genera un nuevo valor en la consulta.
+```sql
+SELECT salario * 1.10 AS salario_con_aumento
+FROM empleados;
+```
 
->[!question]- **¿Cómo se usa una expresión condicional en SELECT?**  
-> Usando `CASE` para devolver valores basados en condiciones.  
-> ```sql
-> SELECT nombre, 
->        CASE 
->          WHEN salario > 50000 THEN 'Alto'
->          ELSE 'Bajo'
->        END AS rango_salarial 
-> FROM empleados;
-> ```
+¿Cómo se usa una expresión condicional en SELECT?
+?
+Usando `CASE` para devolver valores basados en condiciones.
+```sql
+SELECT nombre,
+CASE
+WHEN salario > 50000 THEN 'Alto'
+ELSE 'Bajo'
+END AS rango_salarial
+FROM empleados;
+```
 
->[!danger]- **¿Qué hace COALESCE()?**  
-> Devuelve el primer valor no nulo de una lista.  
-> ```sql
-> SELECT COALESCE(comision, 0) AS comision_real 
-> FROM empleados;
-> ```
+¿Qué hace COALESCE()?
+?
+Devuelve el primer valor no nulo de una lista.
+```sql
+SELECT COALESCE(comision, 0) AS comision_real
+FROM empleados;
+```
 
 ---
 

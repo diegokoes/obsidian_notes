@@ -66,15 +66,17 @@ Most printers don't support ink level reporting through Linux. Options include:
 - Manufacturer-specific tools (e.g., `hp-toolbox` for HP printers from HPLIP package)
 
 ## QUESTIONS
+#flashcards/linux
 
-> [!tip]- How do I access the CUPS web interface?
-> Open your browser and go to `http://localhost:631/jobs/`
+How do I access the CUPS web interface?
+?
+Open your browser and go to `http://localhost:631/jobs/`
 
-> [!warning]- Why can't I see ink levels?
-> Most printers don't support ink level reporting through Linux. You may need manufacturer-specific tools.
+Why can't I see ink levels?
+?
+Most printers don't support ink level reporting through Linux. You may need manufacturer-specific tools.
 
 - - -
-
 
 - Lists all configured printers and their statuses.
 - Works on most distributions with CUPS installed.

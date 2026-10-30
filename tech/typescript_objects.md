@@ -206,28 +206,34 @@ Permiten definir objetos que aceptan tipos dinámicos.
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Cómo se definen objetos en TypeScript?**  
-> Pueden definirse mediante objetos anónimos, interfaces o type alias.  
->```typescript
->type Persona = { nombre: string; edad: number };
->```
+¿Cómo se definen objetos en TypeScript?
+?
+Pueden definirse mediante objetos anónimos, interfaces o type alias.
+```typescript
+type Persona = { nombre: string; edad: number };
+```
 
->[!question]- **¿Qué son las propiedades opcionales en TypeScript?**  
-> Son propiedades que pueden no estar presentes en un objeto. Se definen con `?`.  
->```typescript
->interface Config { ancho?: number; }
->```
+¿Qué son las propiedades opcionales en TypeScript?
+?
+Son propiedades que pueden no estar presentes en un objeto. Se definen con `?`.
+```typescript
+interface Config { ancho?: number; }
+```
 
->[!warning]- **¿Qué es una firma de índice y para qué sirve?**  
-> Permite definir objetos con claves dinámicas.  
->```typescript
->interface Diccionario { [clave: string]: string; }
->```
+¿Qué es una firma de índice y para qué sirve?
+?
+Permite definir objetos con claves dinámicas.
+```typescript
+interface Diccionario { [clave: string]: string; }
+```
 
->[!danger]- **¿Cómo se manejan los excesos de propiedades?**  
-> Se usan type assertions o firmas de índice.  
->```typescript
->interface Config { color?: string; ancho?: number; [propiedad: string]: unknown; }
->```
+¿Cómo se manejan los excesos de propiedades?
+?
+Se usan type assertions o firmas de índice.
+```typescript
+interface Config { color?: string; ancho?: number; [propiedad: string]: unknown; }
+```
+
 - - - 

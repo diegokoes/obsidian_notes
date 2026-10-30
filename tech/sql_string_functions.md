@@ -19,30 +19,35 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace CONCAT()?**  
-> Combina dos cadenas en una sola.  
-> ```sql
-> SELECT CONCAT('Hola, ', 'Mundo') AS saludo FROM DUAL;
-> ```
+¿Qué hace CONCAT()?
+?
+Combina dos cadenas en una sola.
+```sql
+SELECT CONCAT('Hola, ', 'Mundo') AS saludo FROM DUAL;
+```
 
->[!question]- **¿Cómo convertir una cadena a mayúsculas o minúsculas?**  
-> Usando `UPPER()` o `LOWER()`.  
-> ```sql
-> SELECT UPPER(nombre), LOWER(nombre) FROM empleados;
-> ```
+¿Cómo convertir una cadena a mayúsculas o minúsculas?
+?
+Usando `UPPER()` o `LOWER()`.
+```sql
+SELECT UPPER(nombre), LOWER(nombre) FROM empleados;
+```
 
->[!warning]- **¿Qué hace SUBSTR()?**  
-> Extrae una parte específica de una cadena según la posición inicial y la longitud.  
-> ```sql
-> SELECT SUBSTR(nombre, 1, 3) AS iniciales FROM empleados;
-> ```
+¿Qué hace SUBSTR()?
+?
+Extrae una parte específica de una cadena según la posición inicial y la longitud.
+```sql
+SELECT SUBSTR(nombre, 1, 3) AS iniciales FROM empleados;
+```
 
->[!danger]- **¿Cómo buscar la posición de un carácter en una cadena?**  
-> Usando `INSTR()`.  
-> ```sql
-> SELECT INSTR('Hello, World', ',') AS posicion FROM DUAL; -- Resultado: 6
-> ```
+¿Cómo buscar la posición de un carácter en una cadena?
+?
+Usando `INSTR()`.
+```sql
+SELECT INSTR('Hello, World', ',') AS posicion FROM DUAL; -- Resultado: 6
+```
 
 ---
 

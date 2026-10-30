@@ -31,17 +31,3 @@ You don't have to know how it's doing things, just how to write an implementatio
 
 
 ## QUESTIONS
-
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
-
-
-
-
-

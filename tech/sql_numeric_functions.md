@@ -14,31 +14,36 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace ABS()?**  
-> Devuelve el valor absoluto de un número.  
-> ```sql
-> SELECT ABS(-5) AS absoluto FROM DUAL; -- Resultado: 5
-> ```
+¿Qué hace ABS()?
+?
+Devuelve el valor absoluto de un número.
+```sql
+SELECT ABS(-5) AS absoluto FROM DUAL; -- Resultado: 5
+```
 
->[!question]- **¿Cuál es la diferencia entre ROUND() y TRUNC()?**  
-> - `ROUND()` redondea un número al entero o decimal más cercano.  
-> - `TRUNC()` elimina los decimales sin redondear.  
-> ```sql
-> SELECT ROUND(2.666, 2), TRUNC(2.666, 2) FROM DUAL; -- Resultado: 2.67, 2.66
-> ```
+¿Cuál es la diferencia entre ROUND() y TRUNC()?
+?
+- `ROUND()` redondea un número al entero o decimal más cercano.
+- `TRUNC()` elimina los decimales sin redondear.
+```sql
+SELECT ROUND(2.666, 2), TRUNC(2.666, 2) FROM DUAL; -- Resultado: 2.67, 2.66
+```
 
->[!warning]- **¿Qué hace NVL()?**  
-> Sustituye los valores `NULL` por un valor especificado.  
-> ```sql
-> SELECT NVL(comision, 0) AS comision FROM empleados;
-> ```
+¿Qué hace NVL()?
+?
+Sustituye los valores `NULL` por un valor especificado.
+```sql
+SELECT NVL(comision, 0) AS comision FROM empleados;
+```
 
->[!danger]- **¿Cómo calcularías el promedio de un campo numérico?**  
-> Usando `AVG()`, que calcula la media aritmética.  
-> ```sql
-> SELECT AVG(salario) AS promedio FROM empleados;
-> ```
+¿Cómo calcularías el promedio de un campo numérico?
+?
+Usando `AVG()`, que calcula la media aritmética.
+```sql
+SELECT AVG(salario) AS promedio FROM empleados;
+```
 
 ---
 

@@ -129,15 +129,18 @@ env = MOZ_ENABLE_WAYLAND,1
 ```
 
 ## QUESTIONS
+#flashcards/hyprland
 
-> [!tip]- Where should I put my Hyprland configuration?
-> Place it in `~/.config/hypr/hyprland.conf` or create modular configs in the same directory
+Where should I put my Hyprland configuration?
+?
+Place it in `~/.config/hypr/hyprland.conf` or create modular configs in the same directory
 
-> [!warning]- Why aren't my changes taking effect?
-> Run `hyprctl reload` after making changes, or check syntax with `hyprctl reload` for error messages
+Why aren't my changes taking effect?
+?
+Run `hyprctl reload` after making changes, or check syntax with `hyprctl reload` for error messages
 
-> [!danger]- My Hyprland won't start after configuration changes
-> Check the syntax in your config file, particularly brackets and semicolons. Use a backup config if needed.
+My Hyprland won't start after configuration changes
+?
+Check the syntax in your config file, particularly brackets and semicolons. Use a backup config if needed.
 
 - - -
-

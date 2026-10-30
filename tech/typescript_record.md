@@ -89,39 +89,45 @@ El tipo `Record` utiliza dos parámetros genéricos:
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué es el tipo `Record` en TypeScript?**  
-> Es un tipo genérico que mapea un conjunto de claves a un tipo de valores.  
-> ```typescript
-> type Roles = "admin" | "editor";
-> type Permisos = Record<Roles, boolean>;
-> ```
+¿Qué es el tipo `Record` en TypeScript?
+?
+Es un tipo genérico que mapea un conjunto de claves a un tipo de valores.
+```typescript
+type Roles = "admin" | "editor";
+type Permisos = Record<Roles, boolean>;
+```
 
->[!question]- **¿Qué tipos pueden ser usados como claves (`K`) en un `Record`?**  
-> Las claves pueden ser strings, números o símbolos.  
-> ```typescript
-> type Configuracion = Record<"desarrollo" | "produccion", string>;
-> ```
+¿Qué tipos pueden ser usados como claves (`K`) en un `Record`?
+?
+Las claves pueden ser strings, números o símbolos.
+```typescript
+type Configuracion = Record<"desarrollo" | "produccion", string>;
+```
 
->[!warning]- **¿Qué pasa si defines una clave que no está en el conjunto permitido?**  
-> TypeScript mostrará un error, ya que las claves deben coincidir exactamente con las definidas en `K`.  
-> ```typescript
-> type Roles = "admin" | "editor";
-> const permisos: Record<Roles, boolean> = {
->   admin: true,
->   editor: true,
->   viewer: false, // Error: "viewer" no está definido en `Roles`.
-> };
-> ```
+¿Qué pasa si defines una clave que no está en el conjunto permitido?
+?
+TypeScript mostrará un error, ya que las claves deben coincidir exactamente con las definidas en `K`.
+```typescript
+type Roles = "admin" | "editor";
+const permisos: Record<Roles, boolean> = {
+admin: true,
+editor: true,
+viewer: false, // Error: "viewer" no está definido en `Roles`.
+};
+```
 
->[!danger]- **¿Qué ventajas y limitaciones tiene `Record` frente a un objeto tradicional?**  
-> Ventajas:  
-> - Asegura que las claves sean las definidas y los valores sean del tipo correcto.  
-> Limitaciones:  
-> - No permite claves dinámicas fuera del conjunto especificado.  
-> ```typescript
-> type Permisos = Record<"admin" | "editor", boolean>;
-> const permisos: Permisos = { admin: true, editor: false }; // Correcto
-> const permisosDinamico = { admin: true, editor: false, viewer: true }; // Error
-> ```
+¿Qué ventajas y limitaciones tiene `Record` frente a un objeto tradicional?
+?
+Ventajas:
+- Asegura que las claves sean las definidas y los valores sean del tipo correcto.
+Limitaciones:
+- No permite claves dinámicas fuera del conjunto especificado.
+```typescript
+type Permisos = Record<"admin" | "editor", boolean>;
+const permisos: Permisos = { admin: true, editor: false }; // Correcto
+const permisosDinamico = { admin: true, editor: false, viewer: true }; // Error
+```
+
 - - - 

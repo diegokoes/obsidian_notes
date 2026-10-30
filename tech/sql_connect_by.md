@@ -14,32 +14,36 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace CONNECT BY en SQL?**  
-> Crea una relación jerárquica entre filas de una tabla, como padre-hijo.  
-> ```sql
-> SELECT empleado_id, supervisor_id 
-> FROM empleados 
-> CONNECT BY PRIOR empleado_id = supervisor_id;
-> ```
+¿Qué hace CONNECT BY en SQL?
+?
+Crea una relación jerárquica entre filas de una tabla, como padre-hijo.
+```sql
+SELECT empleado_id, supervisor_id
+FROM empleados
+CONNECT BY PRIOR empleado_id = supervisor_id;
+```
 
->[!question]- **¿Qué es START WITH en consultas jerárquicas?**  
-> Define el punto de inicio de la jerarquía.  
-> ```sql
-> SELECT empleado_id, supervisor_id 
-> FROM empleados 
-> START WITH supervisor_id IS NULL 
-> CONNECT BY PRIOR empleado_id = supervisor_id;
-> ```
+¿Qué es START WITH en consultas jerárquicas?
+?
+Define el punto de inicio de la jerarquía.
+```sql
+SELECT empleado_id, supervisor_id
+FROM empleados
+START WITH supervisor_id IS NULL
+CONNECT BY PRIOR empleado_id = supervisor_id;
+```
 
->[!danger]- **¿Cómo limitar la profundidad de una jerarquía?**  
-> Usando `LEVEL`, que representa el nivel de profundidad en la jerarquía.  
-> ```sql
-> SELECT empleado_id, supervisor_id, LEVEL 
-> FROM empleados 
-> CONNECT BY PRIOR empleado_id = supervisor_id 
-> AND LEVEL <= 3;
-> ```
+¿Cómo limitar la profundidad de una jerarquía?
+?
+Usando `LEVEL`, que representa el nivel de profundidad en la jerarquía.
+```sql
+SELECT empleado_id, supervisor_id, LEVEL
+FROM empleados
+CONNECT BY PRIOR empleado_id = supervisor_id
+AND LEVEL <= 3;
+```
 
 ---
 

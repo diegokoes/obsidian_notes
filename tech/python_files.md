@@ -118,71 +118,72 @@ if os.path.exists(path):
 ```
 
 ## QUESTIONS
-> [!tip]- What's the difference between 'r+' and 'w+' modes?
-> 'r+' opens for reading and writing but doesn't create or truncate the file.
-> 'w+' opens for reading and writing, creates the file if it doesn't exist, and truncates it if it does.
+#flashcards/python
 
-> [!warning]- How do I handle very large files that don't fit in memory?
-> Use line-by-line reading with a for loop or read in chunks:
-> ```python
-> # Line by line
-> with open('huge_file.txt', 'r') as f:
->     for line in f:
->         process(line)
->         
-> # In chunks
-> with open('huge_file.txt', 'rb') as f:
->     chunk = f.read(1024)  # 1KB chunks
->     while chunk:
->         process(chunk)
->         chunk = f.read(1024)
-> ```
+What's the difference between 'r+' and 'w+' modes?
+?
+'r+' opens for reading and writing but doesn't create or truncate the file.
+'w+' opens for reading and writing, creates the file if it doesn't exist, and truncates it if it does.
 
-> [!danger]- How can I safely write to files to prevent data loss?
-> Use the following practices:
-> 1. Always use context managers (`with` statement)
-> 2. For critical data, write to temporary file and rename when complete:
-> ```python
-> import os
-> temp_path = "data_new.txt"
-> final_path = "data.txt"
-> 
-> with open(temp_path, 'w') as f:
->     f.write("Important data")
->     f.flush()
->     os.fsync(f.fileno())  # Ensure data is written to disk
->     
-> os.replace(temp_path, final_path)  # Atomic operation
-> ```
+How do I handle very large files that don't fit in memory?
+?
+Use line-by-line reading with a for loop or read in chunks:
+```python
+# Line by line
+with open('huge_file.txt', 'r') as f:
+for line in f:
+process(line)
+# In chunks
+with open('huge_file.txt', 'rb') as f:
+chunk = f.read(1024)  # 1KB chunks
+while chunk:
+process(chunk)
+chunk = f.read(1024)
+```
 
-> [!tip]- How do I work with CSV files in Python?
-> Use the built-in CSV module for reliable handling:
-> ```python
-> import csv
-> 
-> # Reading CSV
-> with open('data.csv', 'r', newline='') as csvfile:
->     reader = csv.reader(csvfile)
->     for row in reader:
->         print(row)  # List of values
->         
-> # Writing CSV
-> with open('output.csv', 'w', newline='') as csvfile:
->     writer = csv.writer(csvfile)
->     writer.writerow(['Name', 'Age', 'City'])
->     writer.writerow(['Alice', '30', 'New York'])
-> ```
+How can I safely write to files to prevent data loss?
+?
+Use the following practices:
+1. Always use context managers (`with` statement)
+2. For critical data, write to temporary file and rename when complete:
+```python
+import os
+temp_path = "data_new.txt"
+final_path = "data.txt"
+with open(temp_path, 'w') as f:
+f.write("Important data")
+f.flush()
+os.fsync(f.fileno())  # Ensure data is written to disk
+os.replace(temp_path, final_path)  # Atomic operation
+```
 
-> [!warning]- What's the proper way to handle file encodings?
-> Always specify encodings explicitly to avoid platform-specific issues:
-> ```python
-> # UTF-8 is generally recommended
-> with open('file.txt', 'r', encoding='utf-8') as f:
->     content = f.read()
->     
-> # For writing
-> with open('output.txt', 'w', encoding='utf-8') as f:
->     f.write('Content with non-ASCII characters: ñáéíóú')
-> ```
+How do I work with CSV files in Python?
+?
+Use the built-in CSV module for reliable handling:
+```python
+import csv
+# Reading CSV
+with open('data.csv', 'r', newline='') as csvfile:
+reader = csv.reader(csvfile)
+for row in reader:
+print(row)  # List of values
+# Writing CSV
+with open('output.csv', 'w', newline='') as csvfile:
+writer = csv.writer(csvfile)
+writer.writerow(['Name', 'Age', 'City'])
+writer.writerow(['Alice', '30', 'New York'])
+```
+
+What's the proper way to handle file encodings?
+?
+Always specify encodings explicitly to avoid platform-specific issues:
+```python
+# UTF-8 is generally recommended
+with open('file.txt', 'r', encoding='utf-8') as f:
+content = f.read()
+# For writing
+with open('output.txt', 'w', encoding='utf-8') as f:
+f.write('Content with non-ASCII characters: ñáéíóú')
+```
 
 - - -

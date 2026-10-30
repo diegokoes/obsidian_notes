@@ -14,28 +14,32 @@ up:
 ---
 
 ## QUESTIONS
+#flashcards/sql
 
->[!tip]- **¿Qué hace el comando SELECT?**  
-> Recupera datos de una tabla, permitiendo filtrar, transformar y organizar resultados.  
-> ```sql
-> SELECT nombre, edad FROM empleados;
-> ```
+¿Qué hace el comando SELECT?
+?
+Recupera datos de una tabla, permitiendo filtrar, transformar y organizar resultados.
+```sql
+SELECT nombre, edad FROM empleados;
+```
 
->[!question]- **¿Qué hace DISTINCT en un SELECT?**  
-> Elimina duplicados en los resultados.  
-> ```sql
-> SELECT DISTINCT departamento FROM empleados;
-> ```
+¿Qué hace DISTINCT en un SELECT?
+?
+Elimina duplicados en los resultados.
+```sql
+SELECT DISTINCT departamento FROM empleados;
+```
 
->[!danger]- **¿Qué diferencia hay entre WHERE y HAVING?**  
-> - `WHERE`: Filtra datos antes de las agregaciones.  
-> - `HAVING`: Filtra datos después de realizar las agregaciones.  
-> ```sql
-> SELECT departamento, AVG(salario) 
-> FROM empleados
-> GROUP BY departamento
-> HAVING AVG(salario) > 50000;
-> ```
+¿Qué diferencia hay entre WHERE y HAVING?
+?
+- `WHERE`: Filtra datos antes de las agregaciones.
+- `HAVING`: Filtra datos después de realizar las agregaciones.
+```sql
+SELECT departamento, AVG(salario)
+FROM empleados
+GROUP BY departamento
+HAVING AVG(salario) > 50000;
+```
 
 ---
 

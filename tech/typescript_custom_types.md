@@ -85,29 +85,35 @@ Cada uno de estos temas se encuentra explicado con detalle en su respectiva nota
 ---
 
 ## QUESTIONS
+#flashcards/typescript
 
->[!tip]- **¿Qué son los tipos personalizados en TypeScript?**  
-> Son definiciones específicas creadas por el desarrollador para modelar datos y comportamientos.  
->```typescript
->type Usuario = { nombre: string; edad: number };
->```
+¿Qué son los tipos personalizados en TypeScript?
+?
+Son definiciones específicas creadas por el desarrollador para modelar datos y comportamientos.
+```typescript
+type Usuario = { nombre: string; edad: number };
+```
 
->[!question]- **¿Cuándo usar `type` y cuándo usar `interface`?**  
-> Usa `interface` para objetos y herencia; `type` para uniones, literales o combinaciones avanzadas.  
->```typescript
->type Rol = "admin" | "user";
->interface Usuario { nombre: string; edad: number; rol: Rol; }
->```
+¿Cuándo usar `type` y cuándo usar `interface`?
+?
+Usa `interface` para objetos y herencia; `type` para uniones, literales o combinaciones avanzadas.
+```typescript
+type Rol = "admin" | "user";
+interface Usuario { nombre: string; edad: number; rol: Rol; }
+```
 
->[!warning]- **¿Qué pasa si abusas de `any` en tipos personalizados?**  
-> Pierdes la ventaja del sistema de tipos, creando estructuras más propensas a errores.  
->```typescript
->type Inseguro = any; // Evítalo siempre que puedas
->```
+¿Qué pasa si abusas de `any` en tipos personalizados?
+?
+Pierdes la ventaja del sistema de tipos, creando estructuras más propensas a errores.
+```typescript
+type Inseguro = any; // Evítalo siempre que puedas
+```
 
->[!danger]- **¿Cómo puedes usar tipos personalizados avanzados?**  
-> Aprovecha operadores como `keyof`, `typeof`, o mapeos para manipular tipos existentes.  
->```typescript
->type PropiedadesUsuario = keyof Usuario; // "nombre" | "edad"
->```
+¿Cómo puedes usar tipos personalizados avanzados?
+?
+Aprovecha operadores como `keyof`, `typeof`, o mapeos para manipular tipos existentes.
+```typescript
+type PropiedadesUsuario = keyof Usuario; // "nombre" | "edad"
+```
+
 - - - 

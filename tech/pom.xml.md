@@ -162,49 +162,50 @@ Below is a detailed breakdown of the POM’s structure and key elements:
 - Lists submodules to build as part of a parent project.  
 
 ## QUESTIONS
-> [!tip]-  What is the minimum required information in a POM file?
-> - `modelVersion`, `groupId`, `artifactId`, and `version`.  
-> - Example:  
->  ```xml  
->  <project>  
->    <modelVersion>4.0.0</modelVersion>  
->   <groupId>com.example</groupId>  
->    <artifactId>my-app</artifactId>  
->    <version>1.0.0</version>  
->  </project> 
->   ```  
+#flashcards/java
 
-> [!tip]-  How do you set the Java version in Maven?
-> Configure the `maven-compiler-plugin`:  
-> ```xml  
-><build>  
-> <plugins>  
->    <plugin>  
->    <groupId>org.apache.maven.plugins</groupId>  
->      <artifactId>maven-compiler-plugin</artifactId>  
->      <configuration>  
->        <source>11</source>  
->        <target>11</target>  
->      </configuration>  
->    </plugin>  
->  </plugins>  
-></build>  
->```  
+What is the minimum required information in a POM file?
+?
+- `modelVersion`, `groupId`, `artifactId`, and `version`.
+- Example:
+```xml
+<project>
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.example</groupId>
+<artifactId>my-app</artifactId>
+<version>1.0.0</version>
+</project>
+```
 
-> [!warning]- What is the difference between `<dependencies>` and `<dependencyManagement>`?
->- **`<dependencies>`**: Directly adds dependencies to the project.  
->- **`<dependencyManagement>`**: Centralizes versions for dependencies; child modules must explicitly declare them.  
+How do you set the Java version in Maven?
+?
+Configure the `maven-compiler-plugin`:
+```xml
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<configuration>
+<source>11</source>
+<target>11</target>
+</configuration>
+</plugin>
+</plugins>
+</build>
+```
 
-> [!warning]- What is the purpose of the `<scope>` tag in a dependency? 
->Defines when a dependency is included:  
->- `compile` (default): Available in all phases.  
->- `test`: Only for test compilation and execution.  
->- `provided`: Provided by the runtime environment (e.g., servlet API in a WAR).  
+What is the difference between `<dependencies>` and `<dependencyManagement>`?
+?
+- **`<dependencies>`**: Directly adds dependencies to the project.
+- **`<dependencyManagement>`**: Centralizes versions for dependencies; child modules must explicitly declare them.
 
-> [!danger]- Question
-> Answer
-
-
+What is the purpose of the `<scope>` tag in a dependency?
+?
+Defines when a dependency is included:
+- `compile` (default): Available in all phases.
+- `test`: Only for test compilation and execution.
+- `provided`: Provided by the runtime environment (e.g., servlet API in a WAR).
 
 **Q5: How do you handle resource filtering?**  
 **A5**: Use the `<resources>` section with `<filtering>true</filtering>` to replace placeholders in files (e.g., `${environment}`):  
@@ -253,7 +254,6 @@ Below is a detailed breakdown of the POM’s structure and key elements:
 ```bash  
 mvn install -Pprod  
 ```  
-
 
 This breakdown provides a comprehensive understanding of the POM structure, its key components, and practical use cases. 
 - - - 

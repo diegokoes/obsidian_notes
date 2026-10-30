@@ -25,7 +25,8 @@ Yes, if values exceed -128 or 127
 Why use it over int?
 ?
 Primarily for memory constraints or specific byte-level operations
-- - -
+
+- - - 
 
 # JAVA -> DATA TYPES -> (DATATYPE)
 ## SUMMARY

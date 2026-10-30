@@ -60,14 +60,18 @@ hyprctl monitors
 - [[hyprland_troubleshooting|Troubleshooting]]
 
 ## QUESTIONS
+#flashcards/hyprland
 
-> [!tip]- How do I reload Hyprland configuration?
-> Use `hyprctl reload` to reload the configuration without restarting
+How do I reload Hyprland configuration?
+?
+Use `hyprctl reload` to reload the configuration without restarting
 
-> [!warning]- Why are my applications not starting?
-> Make sure you have the required environment variables set and XDG portals installed
+Why are my applications not starting?
+?
+Make sure you have the required environment variables set and XDG portals installed
 
-> [!danger]- Hyprland crashed, how do I recover?
-> Switch to a TTY (Ctrl+Alt+F2) and restart your display manager or run `Hyprland` again
+Hyprland crashed, how do I recover?
+?
+Switch to a TTY (Ctrl+Alt+F2) and restart your display manager or run `Hyprland` again
 
 - - -
