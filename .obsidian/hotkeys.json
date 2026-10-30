@@ -8,14 +8,6 @@
       "key": "2"
     }
   ],
-  "obsidian-full-calendar:full-calendar-open": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "5"
-    }
-  ],
   "outline:open": [
     {
       "modifiers": [
@@ -55,54 +47,6 @@
         "Alt"
       ],
       "key": "9"
-    }
-  ],
-  "templater-obsidian:zzz/Templates/studying.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "2"
-    }
-  ],
-  "templater-obsidian:zzz/Templates/definition.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "2"
-    }
-  ],
-  "templater-obsidian:zzz/Templates/question.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "3"
-    }
-  ],
-  "templater-obsidian:z/Templates/definition.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "2"
-    }
-  ],
-  "templater-obsidian:z/Templates/question.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "3"
-    }
-  ],
-  "tag-pane:open": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Q"
     }
   ],
   "app:go-back": [
@@ -147,15 +91,6 @@
       "key": "R"
     }
   ],
-  "templater-obsidian:_/Templates/story.md": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "4"
-    }
-  ],
   "file-explorer:move-file": [
     {
       "modifiers": [
@@ -166,37 +101,12 @@
       "key": "M"
     }
   ],
-  "obsidian-style-settings:style-settings-class-toggle-obsidian-prism-theme-pt-focused-mode": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "F"
-    }
-  ],
   "obsidian-regex-replace:obsidian-regex-replace": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "F2"
-    }
-  ],
-  "password-protection:Open password protection": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "5"
-    }
-  ],
-  "daily-notes": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "D"
     }
   ],
   "app:open-vault": [
@@ -206,23 +116,6 @@
         "Mod"
       ],
       "key": "N"
-    }
-  ],
-  "google-calendar:open-google-calendar-month-view": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "C"
-    }
-  ],
-  "obsidian-tasks-plugin:edit-task": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "D"
     }
   ],
   "templater-obsidian:create-new-note-from-template": [],

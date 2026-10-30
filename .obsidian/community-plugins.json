@@ -1,14 +1,12 @@
 [
   "templater-obsidian",
-  "obsidian-hider",
-  "obsidian-regex-replace",
-  "global-search-and-replace",
-  "obsidian-wakatime",
-  "obsidian-style-settings",
   "obsidian-linter",
-  "obsidian-excalidraw-plugin",
-  "highlightr-plugin",
   "obsidian-latex-suite",
-  "obsidian-list-callouts",
-  "dataview"
+  "obsidian-excalidraw-plugin",
+  "obsidian-style-settings",
+  "obsidian-hider",
+  "obsidian-wakatime",
+  "obsidian-regex-replace",
+  "obsidian-spaced-repetition",
+  "obsidian-git"
 ]

@@ -16,14 +16,14 @@
   "folder_templates": [
     {
       "folder": "/",
-      "template": "Templates/FolderTagTemplate.md"
+      "template": "Templates/new_note.md"
     }
   ],
   "enable_file_templates": false,
   "file_templates": [
     {
       "regex": "Untitled",
-      "template": "Templates/FolderTagTemplate.md"
+      "template": "Templates/new_note.md"
     }
   ],
   "syntax_highlighting": true,

@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "flashcardTags": ["#flashcards"],
+    "convertHighlightsToClozes": false,
+    "clozePatterns": [],
+    "singleLineCardSeparator": "::>",
+    "singleLineReversedCardSeparator": ":::>"
+  }
+}
