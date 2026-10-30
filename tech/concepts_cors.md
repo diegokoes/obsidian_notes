@@ -1,6 +1,7 @@
 ---
 up:
   - "[[concepts]]"
+  - "[[sec]]"
 ---
 # CONCEPTS > CORS
 

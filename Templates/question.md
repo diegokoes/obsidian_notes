@@ -1,9 +1,6 @@
 ## QUESTIONS
-> [!tip]- Question
-> Answer
+#flashcards/<% tp.file.title.split("_")[0] %>
 
-> [!warning]- Question
-> Answer
+<% tp.file.cursor() %>
+?
 
-> [!danger]- Question
-> Answer

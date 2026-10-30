@@ -1,6 +1,7 @@
 ---
 up:
   - "[[concepts]]"
+  - "[[net]]"
 ---
 # CONCEPTS > HTTP
 

@@ -1,6 +1,7 @@
 ---
 up:
   - "[[concepts]]"
+  - "[[net]]"
 ---
 # DNS (DOMAIN NAME SYSTEM)
 
