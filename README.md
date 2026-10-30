@@ -1,7 +1,7 @@
 
 # MY OBSIDIAN VAULT FOR PROGRAMMING
 
- ⚠️ It's a backup of my obsidian notes, they are not formatted to be properly linked and rendered in GitHub. 
+ It's a backup of my obsidian notes (programming, tech, studies...) they are not formatted to be properly linked and rendered in GitHub. 
  **and they are being actively organized and created, so they may look a bit chaotic and empty in some topics** 
 
 **Why**:

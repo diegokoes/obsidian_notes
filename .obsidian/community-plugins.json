@@ -5,5 +5,10 @@
   "global-search-and-replace",
   "obsidian-wakatime",
   "obsidian-style-settings",
-  "obsidian-linter"
+  "obsidian-linter",
+  "obsidian-excalidraw-plugin",
+  "highlightr-plugin",
+  "obsidian-latex-suite",
+  "obsidian-list-callouts",
+  "dataview"
 ]
