@@ -12,12 +12,17 @@ up:
 double covers a wide range of fractional values with more precision than float. Used for most floating-point calculations by default.
 
 ## QUESTIONS
-> [!tip]- Why use double?
-> Better precision for calculations
+#flashcards/java
 
-> [!warning]- Performance?
-> Slightly slower than float in some contexts, but usually negligible
+Why use double?
+?
+Better precision for calculations
 
-> [!danger]- Overflow and precision loss?
-> Still possible with extremely large or repetitive calculations
-- - - 
+Performance?
+?
+Slightly slower than float in some contexts, but usually negligible
+
+Overflow and precision loss?
+?
+Still possible with extremely large or repetitive calculations
+- - -

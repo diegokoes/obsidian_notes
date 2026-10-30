@@ -21,11 +21,16 @@ public class Example {
 }
 
 ## QUESTIONS
-> [!tip]- What is the main purpose of a Java class?
-> To define the structure and behavior of objects.
+#flashcards/java
 
-> [!warning]- How does inheritance work in Java?
-> A subclass extends the superclass and inherits its members.
+What is the main purpose of a Java class?
+?
+To define the structure and behavior of objects.
 
-> [!danger]- Can you explain the concept of nested classes?
-> Nested classes are declared within another class, making them logically grouped and potentially private.
+How does inheritance work in Java?
+?
+A subclass extends the superclass and inherits its members.
+
+Can you explain the concept of nested classes?
+?
+Nested classes are declared within another class, making them logically grouped and potentially private.

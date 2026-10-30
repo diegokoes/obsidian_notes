@@ -12,12 +12,17 @@ up:
 float is used where fractional values are required but less precision is acceptable. It's more memory-efficient than double.
 
 ## QUESTIONS
-> [!tip]- When to use float?
-> For graphics or data processing where precision isn't critical
+#flashcards/java
 
-> [!warning]- Precision issues?
-> Floating-point rounding errors can occur
+When to use float?
+?
+For graphics or data processing where precision isn't critical
 
-> [!danger]- Conversions?
-> Casting from double to float can lose precision
-- - - 
+Precision issues?
+?
+Floating-point rounding errors can occur
+
+Conversions?
+?
+Casting from double to float can lose precision
+- - -

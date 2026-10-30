@@ -169,155 +169,143 @@ try {
 - **Test exception scenarios**: Include unit tests for exception paths, not just the happy path.
 
 ## QUESTIONS
-> [!tip]- What is the difference between checked and unchecked exceptions?
-> Checked exceptions must be either caught (with try-catch) or declared (with throws) at compile time. They extend Exception but not RuntimeException, and represent recoverable conditions that good programs should handle. Unchecked exceptions include RuntimeException and its subclasses plus Error types. They don't require explicit handling or declaration and typically represent programming errors that can't be reasonably recovered from at runtime.
+#flashcards/java
 
-> [!tip]- Explain the purpose of the finally block in exception handling.
-> The finally block contains code that always executes when a try block exits, whether normally or due to an exception. It's primarily used for cleanup operations like closing resources (files, connections, etc.) to prevent resource leaks. It executes even if the try or catch blocks contain a return, continue, or break statement. The only scenarios where finally won't execute are if the JVM exits or the thread executing the try block is interrupted or killed.
+What is the difference between checked and unchecked exceptions?
+?
+Checked exceptions must be either caught (with try-catch) or declared (with throws) at compile time. They extend Exception but not RuntimeException, and represent recoverable conditions that good programs should handle. Unchecked exceptions include RuntimeException and its subclasses plus Error types. They don't require explicit handling or declaration and typically represent programming errors that can't be reasonably recovered from at runtime.
 
-> [!warning]- How does try-with-resources differ from traditional try-catch-finally?
-> Try-with-resources (Java 7+) automatically closes resources that implement AutoCloseable or Closeable interfaces. Unlike traditional try-catch-finally where resources must be closed manually in the finally block, try-with-resources handles resource closing automatically and in the correct order. It also manages suppressed exceptions better: if an exception occurs in the try block and another during closing resources, the latter is suppressed but accessible via getSuppressed(). This leads to cleaner, safer code without the boilerplate of manual resource management.
+Explain the purpose of the finally block in exception handling.
+?
+The finally block contains code that always executes when a try block exits, whether normally or due to an exception. It's primarily used for cleanup operations like closing resources (files, connections, etc.) to prevent resource leaks. It executes even if the try or catch blocks contain a return, continue, or break statement. The only scenarios where finally won't execute are if the JVM exits or the thread executing the try block is interrupted or killed.
 
-> [!warning]- How would you implement exception chaining and why is it useful?
-> Exception chaining preserves the original cause when throwing a new exception:
-> ```java
-> try {
->     // Low-level operation
-> } catch (LowLevelException e) {
->     throw new HighLevelException("Operation failed", e);
-> }
-> ```
-> It's useful because it preserves the complete error context. Higher-level code can catch domain-specific exceptions while still having access to the underlying technical cause, enabling both user-friendly error reporting and detailed diagnostic information for troubleshooting. The cause chain can be accessed via getCause() or printed with printStackTrace().
+How does try-with-resources differ from traditional try-catch-finally?
+?
+Try-with-resources (Java 7+) automatically closes resources that implement AutoCloseable or Closeable interfaces. Unlike traditional try-catch-finally where resources must be closed manually in the finally block, try-with-resources handles resource closing automatically and in the correct order. It also manages suppressed exceptions better: if an exception occurs in the try block and another during closing resources, the latter is suppressed but accessible via getSuppressed(). This leads to cleaner, safer code without the boilerplate of manual resource management.
 
-> [!danger]- Design a custom exception hierarchy for a banking system. Explain your design decisions and how they would improve error handling.
-> A robust banking exception hierarchy might look like:
-> ```java
-> // Base exception
-> public abstract class BankingException extends Exception {
->     private final String errorCode;
->     
->     public BankingException(String errorCode, String message) {
->         super(message);
->         this.errorCode = errorCode;
->     }
->     
->     public BankingException(String errorCode, String message, Throwable cause) {
->         super(message, cause);
->         this.errorCode = errorCode;
->     }
->     
->     public String getErrorCode() { return errorCode; }
-> }
->
-> // Account exceptions
-> public class AccountException extends BankingException {
->     // Constructor implementations
-> }
->
-> public class InsufficientFundsException extends AccountException {
->     private final BigDecimal requested;
->     private final BigDecimal available;
->     
->     // Constructor and getters
-> }
->
-> // Transaction exceptions
-> public class TransactionException extends BankingException {
->     // Constructor implementations
-> }
->
-> public class TransactionTimeoutException extends TransactionException {
->     // Constructor implementations
-> }
-> ```
->
-> Design decisions:
-> 1. Base abstract class with error codes for consistent logging and reporting
-> 2. Domain-specific branches (Account, Transaction) for logical organization
-> 3. Specific exceptions with contextual data (requested/available amounts)
-> 4. All checked exceptions since banking errors should be handled explicitly
->
-> This improves error handling by enabling:
-> - Precise exception filtering with specific catch blocks
-> - Rich error context for better debugging
-> - Consistent error codes for support and logging
-> - Domain-specific grouping for handling related errors together
-> - Clear API contracts showing what can go wrong
+How would you implement exception chaining and why is it useful?
+?
+Exception chaining preserves the original cause when throwing a new exception:
+```java
+try {
+// Low-level operation
+} catch (LowLevelException e) {
+throw new HighLevelException("Operation failed", e);
+}
+```
+It's useful because it preserves the complete error context. Higher-level code can catch domain-specific exceptions while still having access to the underlying technical cause, enabling both user-friendly error reporting and detailed diagnostic information for troubleshooting. The cause chain can be accessed via getCause() or printed with printStackTrace().
 
-> [!danger]- How would you implement a retry mechanism for handling transient exceptions in a distributed system?
-> An effective retry mechanism for transient failures:
->
-> ```java
-> public <T> T executeWithRetry(Callable<T> task, 
->                              List<Class<? extends Exception>> retryableExceptions,
->                              int maxAttempts, 
->                              long initialDelay,
->                              double backoffMultiplier) throws Exception {
->     
->     int attempts = 0;
->     long delay = initialDelay;
->     Exception lastException = null;
->     
->     while (attempts < maxAttempts) {
->         try {
->             return task.call();
->         } catch (Exception e) {
->             lastException = e;
->             
->             // Check if we should retry this exception
->             boolean shouldRetry = retryableExceptions.stream()
->                 .anyMatch(exClass -> exClass.isInstance(e));
->             
->             if (!shouldRetry || attempts >= maxAttempts - 1) {
->                 throw e;
->             }
->             
->             // Log the failure
->             log.warn("Operation failed (attempt {} of {}), retrying in {}ms: {}",
->                     attempts + 1, maxAttempts, delay, e.getMessage());
->                     
->             // Wait before retry with exponential backoff
->             try {
->                 Thread.sleep(delay);
->                 delay = Math.round(delay * backoffMultiplier);
->                 attempts++;
->             } catch (InterruptedException ie) {
->                 Thread.currentThread().interrupt();
->                 throw e; // Propagate original exception
->             }
->         }
->     }
->     
->     // This should never happen due to the logic above
->     throw new IllegalStateException("Retry failed", lastException);
-> }
-> ```
->
-> Usage example:
-> ```java
-> try {
->     String result = executeWithRetry(
->         () -> serviceClient.getData(),        // operation to perform
->         Arrays.asList(                        // retryable exceptions
->             ConnectException.class, 
->             SocketTimeoutException.class,
->             ServiceUnavailableException.class
->         ),
->         3,                                    // max attempts
->         1000,                                 // initial delay (1s)
->         2.0                                   // exponential backoff factor
->     );
->     processResult(result);
-> } catch (Exception e) {
->     // Handle ultimate failure
-> }
-> ```
->
-> This implementation includes:
-> - Configurable retry count and exceptions
-> - Exponential backoff to prevent overwhelming the system
-> - Proper handling of thread interruption
-> - Detailed logging of retry attempts
-> - Generic approach that works with any operation
+Design a custom exception hierarchy for a banking system. Explain your design decisions and how they would improve error handling.
+?
+A robust banking exception hierarchy might look like:
+```java
+// Base exception
+public abstract class BankingException extends Exception {
+private final String errorCode;
+public BankingException(String errorCode, String message) {
+super(message);
+this.errorCode = errorCode;
+}
+public BankingException(String errorCode, String message, Throwable cause) {
+super(message, cause);
+this.errorCode = errorCode;
+}
+public String getErrorCode() { return errorCode; }
+}
+// Account exceptions
+public class AccountException extends BankingException {
+// Constructor implementations
+}
+public class InsufficientFundsException extends AccountException {
+private final BigDecimal requested;
+private final BigDecimal available;
+// Constructor and getters
+}
+// Transaction exceptions
+public class TransactionException extends BankingException {
+// Constructor implementations
+}
+public class TransactionTimeoutException extends TransactionException {
+// Constructor implementations
+}
+```
+Design decisions:
+1. Base abstract class with error codes for consistent logging and reporting
+2. Domain-specific branches (Account, Transaction) for logical organization
+3. Specific exceptions with contextual data (requested/available amounts)
+4. All checked exceptions since banking errors should be handled explicitly
+This improves error handling by enabling:
+- Precise exception filtering with specific catch blocks
+- Rich error context for better debugging
+- Consistent error codes for support and logging
+- Domain-specific grouping for handling related errors together
+- Clear API contracts showing what can go wrong
+
+How would you implement a retry mechanism for handling transient exceptions in a distributed system?
+?
+An effective retry mechanism for transient failures:
+```java
+public <T> T executeWithRetry(Callable<T> task,
+List<Class<? extends Exception>> retryableExceptions,
+int maxAttempts,
+long initialDelay,
+double backoffMultiplier) throws Exception {
+int attempts = 0;
+long delay = initialDelay;
+Exception lastException = null;
+while (attempts < maxAttempts) {
+try {
+return task.call();
+} catch (Exception e) {
+lastException = e;
+// Check if we should retry this exception
+boolean shouldRetry = retryableExceptions.stream()
+.anyMatch(exClass -> exClass.isInstance(e));
+if (!shouldRetry || attempts >= maxAttempts - 1) {
+throw e;
+}
+// Log the failure
+log.warn("Operation failed (attempt {} of {}), retrying in {}ms: {}",
+attempts + 1, maxAttempts, delay, e.getMessage());
+// Wait before retry with exponential backoff
+try {
+Thread.sleep(delay);
+delay = Math.round(delay * backoffMultiplier);
+attempts++;
+} catch (InterruptedException ie) {
+Thread.currentThread().interrupt();
+throw e; // Propagate original exception
+}
+}
+}
+// This should never happen due to the logic above
+throw new IllegalStateException("Retry failed", lastException);
+}
+```
+Usage example:
+```java
+try {
+String result = executeWithRetry(
+() -> serviceClient.getData(),        // operation to perform
+Arrays.asList(                        // retryable exceptions
+ConnectException.class,
+SocketTimeoutException.class,
+ServiceUnavailableException.class
+),
+3,                                    // max attempts
+1000,                                 // initial delay (1s)
+2.0                                   // exponential backoff factor
+);
+processResult(result);
+} catch (Exception e) {
+// Handle ultimate failure
+}
+```
+This implementation includes:
+- Configurable retry count and exceptions
+- Exponential backoff to prevent overwhelming the system
+- Proper handling of thread interruption
+- Detailed logging of retry attempts
+- Generic approach that works with any operation
 
 - - - 

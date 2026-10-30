@@ -14,11 +14,16 @@ byte b = 10;
 Byte boxed = b; // Autoboxed
 
 ## QUESTIONS
-> [!tip]- What is the default value of a Byte object?
-> null, because Byte is a reference type.
+#flashcards/java
 
-> [!warning]- Why be cautious with autoboxing in loops?
-> Each autoboxing can create a new object, impacting performance.
+What is the default value of a Byte object?
+?
+null, because Byte is a reference type.
 
-> [!danger]- What happens if you unbox a null Byte?
-> A NullPointerException is thrown.
+Why be cautious with autoboxing in loops?
+?
+Each autoboxing can create a new object, impacting performance.
+
+What happens if you unbox a null Byte?
+?
+A NullPointerException is thrown.

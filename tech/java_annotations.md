@@ -68,22 +68,30 @@ public void doPeriodicCleanup() { ... }
 ```
 
 ## QUESTIONS
-> [!tip]- Why use annotations?
-> They reduce boilerplate code, provide metadata for tools and frameworks, enable compile-time checking, support documentation, and facilitate aspect-oriented programming features without modifying actual business logic.
+#flashcards/java
 
-> [!warning]- What is a retention policy?
-> It specifies whether an annotation is available at source code only (SOURCE), compiled into the class file but ignored by JVM (CLASS), or available at runtime through reflection (RUNTIME). The appropriate retention depends on annotation use case.
+Why use annotations?
+?
+They reduce boilerplate code, provide metadata for tools and frameworks, enable compile-time checking, support documentation, and facilitate aspect-oriented programming features without modifying actual business logic.
 
-> [!danger]- Why create custom annotations?
-> It allows domain-specific metadata for libraries and frameworks. Custom annotations can implement processing logic through annotation processors, enable aspect-oriented programming patterns, provide declarative configuration, and enable framework features through reflection at runtime.
+What is a retention policy?
+?
+It specifies whether an annotation is available at source code only (SOURCE), compiled into the class file but ignored by JVM (CLASS), or available at runtime through reflection (RUNTIME). The appropriate retention depends on annotation use case.
 
-> [!tip]- What's the difference between @Override and @Deprecated?
-> @Override ensures that a method correctly overrides a superclass method (compile-time check), while @Deprecated marks elements that should no longer be used, generating compiler warnings when used.
+Why create custom annotations?
+?
+It allows domain-specific metadata for libraries and frameworks. Custom annotations can implement processing logic through annotation processors, enable aspect-oriented programming patterns, provide declarative configuration, and enable framework features through reflection at runtime.
 
-> [!warning]- How do repeating annotations work internally?
-> Repeating annotations require both the annotation itself marked with @Repeatable and a container annotation type. The compiler automatically wraps multiple annotations in the container annotation, making them accessible at runtime.
+What's the difference between @Override and @Deprecated?
+?
+@Override ensures that a method correctly overrides a superclass method (compile-time check), while @Deprecated marks elements that should no longer be used, generating compiler warnings when used.
 
-> [!danger]- How would you implement a custom annotation processor?
-> Custom processors must extend AbstractProcessor, be registered via the ServiceLoader mechanism with a META-INF/services file, implement the process() method to analyze annotated elements, and use the Filer API to generate code. They run during compilation as part of the Java compiler's annotation processing tool.
+How do repeating annotations work internally?
+?
+Repeating annotations require both the annotation itself marked with @Repeatable and a container annotation type. The compiler automatically wraps multiple annotations in the container annotation, making them accessible at runtime.
+
+How would you implement a custom annotation processor?
+?
+Custom processors must extend AbstractProcessor, be registered via the ServiceLoader mechanism with a META-INF/services file, implement the process() method to analyze annotated elements, and use the Filer API to generate code. They run during compilation as part of the Java compiler's annotation processing tool.
 
 - - - 

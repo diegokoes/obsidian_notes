@@ -103,22 +103,26 @@ These phases define the **build lifecycle** in Maven. When executed in VS Code (
 - **Use Case**: Publish the artifact for collaboration.
 
 ## QUESTIONS
-> [!tip]- How does Maven resolve dependencies?
-> Maven searches for dependencies in the **local repository** first. If not found, it downloads them from **remote repositories** (e.g., Maven Central) and stores them locally.
+#flashcards/java
 
-> [!warning]- What is the difference between Maven and Ant?
->- **Maven**: Declarative, lifecycle-driven, and convention-based.
->    
->- **Ant**: Procedural, requires explicit task definitions (e.g., writing `build.xml`).
+How does Maven resolve dependencies?
+?
+Maven searches for dependencies in the **local repository** first. If not found, it downloads them from **remote repositories** (e.g., Maven Central) and stores them locally.
 
-> [!danger]- How do you add a dependency in Maven?
-> Add the dependency’s `groupId`, `artifactId`, and `version` to the `<dependencies>` section of `pom.xml`:
-> ```xml
-><dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>4.13.2</version>
-  <scope>test</scope>
+What is the difference between Maven and Ant?
+?
+- **Maven**: Declarative, lifecycle-driven, and convention-based.
+- **Ant**: Procedural, requires explicit task definitions (e.g., writing `build.xml`).
+
+How do you add a dependency in Maven?
+?
+Add the dependency’s `groupId`, `artifactId`, and `version` to the `<dependencies>` section of `pom.xml`:
+```xml
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
 </dependency>
->```
-- - - 
+```
+- - -

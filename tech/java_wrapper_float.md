@@ -11,11 +11,16 @@ up:
 Autoboxing converts float to Float automatically. Floats handle decimals but are less precise than doubles. They are typically used in graphics or where memory is constrained.
 
 ## QUESTIONS
-> [!tip]- Why might you use float over double?
-> For reduced memory usage when high precision isn’t critical.
+#flashcards/java
 
-> [!warning]- What can happen with floating-point operations?
-> Rounding errors and precision loss are common.
+Why might you use float over double?
+?
+For reduced memory usage when high precision isn’t critical.
 
-> [!danger]- Describe pitfalls of comparing floats directly with ==.
-> Floating-point calculations can differ at the bit level, causing inaccuracies.
+What can happen with floating-point operations?
+?
+Rounding errors and precision loss are common.
+
+Describe pitfalls of comparing floats directly with ==.
+?
+Floating-point calculations can differ at the bit level, causing inaccuracies.

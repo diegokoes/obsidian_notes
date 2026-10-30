@@ -12,12 +12,17 @@ up:
 long accommodates very large integers, commonly used for counters exceeding int's limit, timestamps, and scenarios needing more than 32 bits.
 
 ## QUESTIONS
-> [!tip]- Typical use cases?
-> Handling large numeric values like file sizes or system times
+#flashcards/java
 
-> [!warning]- Performance cost?
-> Slightly higher than int but important for big values
+Typical use cases?
+?
+Handling large numeric values like file sizes or system times
 
-> [!danger]- Overflow?
-> Possible if you exceed 9,223,372,036,854,775,807
-- - - 
+Performance cost?
+?
+Slightly higher than int but important for big values
+
+Overflow?
+?
+Possible if you exceed 9,223,372,036,854,775,807
+- - -

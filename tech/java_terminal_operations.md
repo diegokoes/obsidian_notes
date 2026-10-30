@@ -16,7 +16,10 @@ up:
 >Son "el final del flujo", donde obtienes el resultado procesado de los datos.
 - - - 
 ## QUESTIONS
->[!warning]- **¿Cómo podrías combinar `reduce()` y `filter()` para sumar solo los números pares de un Stream?**
+#flashcards/java
+
+¿Cómo podrías combinar `reduce()` y `filter()` para sumar solo los números pares de un Stream?
+?
 Primero usaría `filter()` para seleccionar los números pares y luego aplicaría `reduce(0, Integer::sum)` para sumarlos.
 
 ## EXAMPLES

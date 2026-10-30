@@ -12,12 +12,17 @@ up:
 int is widely used for integer arithmetic. It provides enough range for most calculations and is generally the go-to integral type.
 
 ## QUESTIONS
-> [!tip]- Why is int the default?
-> Balances performance and range for typical use cases
+#flashcards/java
 
-> [!warning]- Could operations overflow?
-> Yes, exceeding the range leads to wraparound
+Why is int the default?
+?
+Balances performance and range for typical use cases
 
-> [!danger]- When to avoid int?
-> If larger or smaller data ranges are required
-- - - 
+Could operations overflow?
+?
+Yes, exceeding the range leads to wraparound
+
+When to avoid int?
+?
+If larger or smaller data ranges are required
+- - -

@@ -304,82 +304,72 @@ try {
 ```
 
 ## QUESTIONS
+#flashcards/java
 
-> [!tip]- How do you decide whether to create a checked or unchecked custom exception?
-> Choose a checked exception when:
-> - The error is recoverable and the client code should be aware of it
-> - The exception represents a expected but unusual condition
-> - You want to force callers to handle or propagate the exception
-> 
-> Choose an unchecked exception when:
-> - The exception represents a programming error that shouldn't happen
-> - Recovery is unlikely or impossible
-> - Forcing clients to handle the exception would lead to boilerplate code
->
-> For example, a `FileFormatException` might be checked since clients should handle malformed files, while an `InvalidConfigurationException` might be unchecked since it indicates a configuration bug that should be fixed.
+How do you decide whether to create a checked or unchecked custom exception?
+?
+Choose a checked exception when:
+- The error is recoverable and the client code should be aware of it
+- The exception represents a expected but unusual condition
+- You want to force callers to handle or propagate the exception
+Choose an unchecked exception when:
+- The exception represents a programming error that shouldn't happen
+- Recovery is unlikely or impossible
+- Forcing clients to handle the exception would lead to boilerplate code
+For example, a `FileFormatException` might be checked since clients should handle malformed files, while an `InvalidConfigurationException` might be unchecked since it indicates a configuration bug that should be fixed.
 
-> [!warning]- What are the advantages of using custom exceptions over generic ones like Exception or RuntimeException?
-> Custom exceptions provide several benefits:
->
-> 1. **Domain-specific context:** Custom fields can capture relevant error data like account IDs or transaction amounts
-> 2. **Better error filtering:** Allows catching specific error types rather than broad categories
-> 3. **Self-documenting code:** The exception name itself communicates what went wrong
-> 4. **API clarity:** Method signatures declare the specific error conditions through throws clauses
-> 5. **Extra functionality:** Can include helper methods for error handling or compensation
-> 6. **Consistent handling:** Related exceptions can share behavior through inheritance
-> 7. **Improved logging:** Custom toString() can provide better formatted error messages
->
-> Using generic exceptions loses this context and forces callers to rely on string parsing or other brittle mechanisms to determine the nature of errors.
+What are the advantages of using custom exceptions over generic ones like Exception or RuntimeException?
+?
+Custom exceptions provide several benefits:
+1. **Domain-specific context:** Custom fields can capture relevant error data like account IDs or transaction amounts
+2. **Better error filtering:** Allows catching specific error types rather than broad categories
+3. **Self-documenting code:** The exception name itself communicates what went wrong
+4. **API clarity:** Method signatures declare the specific error conditions through throws clauses
+5. **Extra functionality:** Can include helper methods for error handling or compensation
+6. **Consistent handling:** Related exceptions can share behavior through inheritance
+7. **Improved logging:** Custom toString() can provide better formatted error messages
+Using generic exceptions loses this context and forces callers to rely on string parsing or other brittle mechanisms to determine the nature of errors.
 
-> [!danger]- How would you implement a custom exception system for a multi-layered enterprise application?
-> A robust multi-layered exception system might look like:
->
-> ```java
-> // Base exceptions for each layer
-> public abstract class ApplicationException extends Exception {
->     private final String errorCode;
->     private final ErrorSeverity severity;
->     
->     // Constructor, getters, etc.
->     
->     public boolean isLoggable() {
->         return severity.ordinal() >= ErrorSeverity.WARNING.ordinal();
->     }
-> }
->
-> // Layer-specific base exceptions
-> public abstract class DataAccessException extends ApplicationException { /* ... */ }
-> public abstract class ServiceException extends ApplicationException { /* ... */ }
-> public abstract class UIException extends ApplicationException { /* ... */ }
->
-> // Specific exceptions in each layer
-> public class EntityNotFoundException extends DataAccessException { /* ... */ }
-> public class OptimisticLockingException extends DataAccessException { /* ... */ }
->
-> public class BusinessRuleViolationException extends ServiceException { /* ... */ }
-> public class ServiceUnavailableException extends ServiceException { /* ... */ }
->
-> // Exception translation utilities
-> public class ExceptionTranslator {
->     public static ServiceException translateDataException(DataAccessException ex) {
->         if (ex instanceof EntityNotFoundException) {
->             return new ResourceNotFoundException(ex.getEntityName(), ex.getEntityId(), ex);
->         } else if (ex instanceof OptimisticLockingException) {
->             return new ConcurrentModificationServiceException(ex.getEntityName(), ex);
->         }
->         // Other translations...
->         return new GenericServiceException("Data access error", ex);
->     }
-> }
-> ```
->
-> Each layer would:
-> 1. Define its own exceptions relevant to that layer's concerns
-> 2. Catch exceptions from lower layers and translate them to its own exception types
-> 3. Add contextual information before propagating exceptions upward
-> 4. Use common base classes to enable consistent handling across the application
->
-> This approach preserves the separation of concerns while maintaining the full context of errors through the exception chain.
+How would you implement a custom exception system for a multi-layered enterprise application?
+?
+A robust multi-layered exception system might look like:
+```java
+// Base exceptions for each layer
+public abstract class ApplicationException extends Exception {
+private final String errorCode;
+private final ErrorSeverity severity;
+// Constructor, getters, etc.
+public boolean isLoggable() {
+return severity.ordinal() >= ErrorSeverity.WARNING.ordinal();
+}
+}
+// Layer-specific base exceptions
+public abstract class DataAccessException extends ApplicationException { /* ... */ }
+public abstract class ServiceException extends ApplicationException { /* ... */ }
+public abstract class UIException extends ApplicationException { /* ... */ }
+// Specific exceptions in each layer
+public class EntityNotFoundException extends DataAccessException { /* ... */ }
+public class OptimisticLockingException extends DataAccessException { /* ... */ }
+public class BusinessRuleViolationException extends ServiceException { /* ... */ }
+public class ServiceUnavailableException extends ServiceException { /* ... */ }
+// Exception translation utilities
+public class ExceptionTranslator {
+public static ServiceException translateDataException(DataAccessException ex) {
+if (ex instanceof EntityNotFoundException) {
+return new ResourceNotFoundException(ex.getEntityName(), ex.getEntityId(), ex);
+} else if (ex instanceof OptimisticLockingException) {
+return new ConcurrentModificationServiceException(ex.getEntityName(), ex);
+}
+// Other translations...
+return new GenericServiceException("Data access error", ex);
+}
+}
+```
+Each layer would:
+1. Define its own exceptions relevant to that layer's concerns
+2. Catch exceptions from lower layers and translate them to its own exception types
+3. Add contextual information before propagating exceptions upward
+4. Use common base classes to enable consistent handling across the application
+This approach preserves the separation of concerns while maintaining the full context of errors through the exception chain.
 
 - - -
-

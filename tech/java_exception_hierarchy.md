@@ -119,46 +119,44 @@ Guidelines for deciding which exception type to use:
 | Impossible state | Error subclass (rare for custom code) |
 
 ## QUESTIONS
+#flashcards/java
 
-> [!tip]- Why doesn't Java force developers to handle RuntimeException?
-> RuntimeExceptions typically represent programming errors (like null pointers or invalid indices) that should be fixed rather than caught. Forcing developers to handle these would result in excessive try-catch blocks that obscure code logic. Runtime exceptions can occur almost anywhere, so requiring explicit handling would make code less maintainable. By making them unchecked, Java allows developers to focus on exceptional business conditions while still fixing actual bugs when they're discovered.
+Why doesn't Java force developers to handle RuntimeException?
+?
+RuntimeExceptions typically represent programming errors (like null pointers or invalid indices) that should be fixed rather than caught. Forcing developers to handle these would result in excessive try-catch blocks that obscure code logic. Runtime exceptions can occur almost anywhere, so requiring explicit handling would make code less maintainable. By making them unchecked, Java allows developers to focus on exceptional business conditions while still fixing actual bugs when they're discovered.
 
-> [!warning]- When should you convert between checked and unchecked exceptions?
-> Convert checked to unchecked when:
-> - The exception crosses an API boundary where clients can't reasonably recover
-> - You're implementing an interface that doesn't declare exceptions
-> - The exception indicates a programming error rather than an environmental problem
->
-> Convert unchecked to checked when:
-> - The condition is recoverable and callers should be forced to handle it
-> - You're wrapping low-level technical exceptions into domain-specific ones
->
-> Always preserve the original exception as the cause when converting between types.
+When should you convert between checked and unchecked exceptions?
+?
+Convert checked to unchecked when:
+- The exception crosses an API boundary where clients can't reasonably recover
+- You're implementing an interface that doesn't declare exceptions
+- The exception indicates a programming error rather than an environmental problem
+Convert unchecked to checked when:
+- The condition is recoverable and callers should be forced to handle it
+- You're wrapping low-level technical exceptions into domain-specific ones
+Always preserve the original exception as the cause when converting between types.
 
-> [!danger]- Design an exception hierarchy for a financial transaction system. What types should be checked vs. unchecked?
-> ```
->                     TransactionException (checked)
->                     /        |          \
-> InsufficientFundsException   |           TransactionTimeoutException
-> (checked)                    |           (checked)
->                              |
->                  TransactionSystemException (unchecked)
->                  /            |            \
-> DatabaseConnectionException   |             SecurityViolationException
-> (unchecked)              ConfigurationException
->                          (unchecked)
-> ```
->
-> **Checked exceptions** represent business/domain errors that client code should handle:
-> - InsufficientFundsException: Business rule violation, can be handled by requesting more funds
-> - TransactionTimeoutException: Temporary condition, can be handled by retrying
->
-> **Unchecked exceptions** represent programming or system errors:
-> - DatabaseConnectionException: System failure, generally unrecoverable by application code
-> - ConfigurationException: Setup error, indicates incorrect deployment
-> - SecurityViolationException: Programming error in authorization logic
->
-> This design separates business-level failures from system-level failures, allowing for appropriate handling strategies.
+Design an exception hierarchy for a financial transaction system. What types should be checked vs. unchecked?
+?
+```
+TransactionException (checked)
+/        |          \
+InsufficientFundsException   |           TransactionTimeoutException
+(checked)                    |           (checked)
+|
+TransactionSystemException (unchecked)
+/            |            \
+DatabaseConnectionException   |             SecurityViolationException
+(unchecked)              ConfigurationException
+(unchecked)
+```
+**Checked exceptions** represent business/domain errors that client code should handle:
+- InsufficientFundsException: Business rule violation, can be handled by requesting more funds
+- TransactionTimeoutException: Temporary condition, can be handled by retrying
+**Unchecked exceptions** represent programming or system errors:
+- DatabaseConnectionException: System failure, generally unrecoverable by application code
+- ConfigurationException: Setup error, indicates incorrect deployment
+- SecurityViolationException: Programming error in authorization logic
+This design separates business-level failures from system-level failures, allowing for appropriate handling strategies.
 
 - - -
-

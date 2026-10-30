@@ -113,13 +113,4 @@ While autoboxing and unboxing make code cleaner, there are several important asp
 Understanding autoboxing and unboxing helps you write cleaner code while being aware of potential pitfalls. These features are particularly useful when working with Java's collection frameworks (which can only store objects, not primitives) and with generic types.
 
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer
-
 - - - 

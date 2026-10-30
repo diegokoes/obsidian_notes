@@ -16,23 +16,29 @@ up:
 ![[372081412-349c5bb6-903c-422e-be19-63db2f66ff77.png]]
 
 ## QUESTIONS
-	
-- > [!tip]- **¿Qué es un Stream?**
-    Es un flujo de datos que se puede procesar con operaciones funcionales como `filter()`, `map()` o `reduce()`.
+#flashcards/java
 
-- > [!tip]- **¿Qué diferencia hay entre Streams y colecciones?**
-    -**Streams:** Son inmutables y procesan datos  
-    de manera funcional.
-    -**Colecciones:** Son mutables y almacenan los datos directamente.
+¿Qué es un Stream?
+?
+Es un flujo de datos que se puede procesar con operaciones funcionales como `filter()`, `map()` o `reduce()`.
 
-- > [!question]- **¿Un Stream modifica la colección original?**
-    No. Los Streams no alteran los datos originales; devuelven un nuevo flujo de datos.
+¿Qué diferencia hay entre Streams y colecciones?
+?
+-**Streams:** Son inmutables y procesan datos
+de manera funcional.
+-**Colecciones:** Son mutables y almacenan los datos directamente.
 
-- > [!warning]- **¿Cuáles son las operaciones intermedias en un Stream?**
-    Las operaciones intermedias, como `filter()`, `map()` y `sorted()`, transforman un Stream en otro Stream. Para aprender más, consulta el archivo [[java_intermediate_operations]].
+¿Un Stream modifica la colección original?
+?
+No. Los Streams no alteran los datos originales; devuelven un nuevo flujo de datos.
 
-- > [!warning]- **¿Cuáles son las operaciones terminales en un Stream?**
-    Las operaciones terminales, como `collect()`, `forEach()` y `reduce()`, consumen el Stream para generar un resultado. Para más detalles, revisa el archivo [[java_terminal_operations]].
+¿Cuáles son las operaciones intermedias en un Stream?
+?
+Las operaciones intermedias, como `filter()`, `map()` y `sorted()`, transforman un Stream en otro Stream. Para aprender más, consulta el archivo [[java_intermediate_operations]].
+
+¿Cuáles son las operaciones terminales en un Stream?
+?
+Las operaciones terminales, como `collect()`, `forEach()` y `reduce()`, consumen el Stream para generar un resultado. Para más detalles, revisa el archivo [[java_terminal_operations]].
 
 ## EXAMPLES
 

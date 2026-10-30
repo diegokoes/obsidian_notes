@@ -48,20 +48,27 @@ List<String> ordenados = nombres.stream()
 							    .collect(Collectors.toList());
 ```
 ## QUESTIONS
->[!tip]- **¿Las operaciones intermedias se ejecutan inmediatamente?** 
+#flashcards/java
+
+¿Las operaciones intermedias se ejecutan inmediatamente?
+?
 No, las operaciones intermedias son **perezosas** y no se ejecutan hasta que se invoque una operación terminal.
 
-> [!question]- **¿Qué diferencia hay entre `filter()` y `map()` en Streams?**
->- `filter()`: Selecciona elementos según una condición booleana.
->- `map()`: Transforma elementos del Stream aplicando una función.
+¿Qué diferencia hay entre `filter()` y `map()` en Streams?
+?
+- `filter()`: Selecciona elementos según una condición booleana.
+- `map()`: Transforma elementos del Stream aplicando una función.
 
-> [!question]- **¿Qué hace el método `sorted()` en un Stream?**
+¿Qué hace el método `sorted()` en un Stream?
+?
 Ordena los elementos del Stream. Por defecto, utiliza el orden natural o un `Comparator` si se especifica.
 
->[!warning]- **¿Cómo utilizarías `flatMap()` para transformar una lista de listas en una sola lista?**
- `flatMap()` toma cada lista dentro del Stream y las aplana en un único flujo continuo de elementos.
+¿Cómo utilizarías `flatMap()` para transformar una lista de listas en una sola lista?
+?
+`flatMap()` toma cada lista dentro del Stream y las aplana en un único flujo continuo de elementos.
 
->[!danger]- **¿Cómo optimizarías el uso de operaciones intermedias para trabajar con grandes conjuntos de datos?**
+¿Cómo optimizarías el uso de operaciones intermedias para trabajar con grandes conjuntos de datos?
+?
 Utilizando operaciones perezosas como `limit()` para reducir el tamaño del Stream antes de procesarlo por completo.
 
 - - -

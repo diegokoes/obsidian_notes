@@ -12,16 +12,20 @@ up:
 The byte type is often used to save space in arrays or when dealing with raw data like file I/O. It is the smallest integer type in Java.
 
 ## QUESTIONS
-> [!tip]- When should I use byte?
-> For efficient memory usage when storing small integers or raw data streams
+#flashcards/java
 
-> [!warning]- Could it overflow?
-> Yes, if values exceed -128 or 127
+When should I use byte?
+?
+For efficient memory usage when storing small integers or raw data streams
 
-> [!danger]- Why use it over int?
-> Primarily for memory constraints or specific byte-level operations
-- - - 
+Could it overflow?
+?
+Yes, if values exceed -128 or 127
 
+Why use it over int?
+?
+Primarily for memory constraints or specific byte-level operations
+- - -
 
 # JAVA -> DATA TYPES -> (DATATYPE)
 ## SUMMARY
@@ -31,11 +35,3 @@ The byte type is often used to save space in arrays or when dealing with raw dat
 ## THEORY
 
 ## QUESTIONS
-> [!tip]- Question
-> Answer
-
-> [!warning]- Question
-> Answer
-
-> [!danger]- Question
-> Answer

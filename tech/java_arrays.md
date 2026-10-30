@@ -13,11 +13,16 @@ Arrays in Java are objects that store multiple values contiguously. They are zer
 String[] names = new String[10];
 
 ## QUESTIONS
-> [!tip]- How can you iterate over an array in Java?
-> Using a for loop or an enhanced for loop.
+#flashcards/java
 
-> [!warning]- What happens if you access an invalid index?
-> An ArrayIndexOutOfBoundsException is thrown.
+How can you iterate over an array in Java?
+?
+Using a for loop or an enhanced for loop.
 
-> [!danger]- Explain the limitations of arrays compared to ArrayList.
-> Arrays have a fixed size; ArrayLists can grow dynamically.
+What happens if you access an invalid index?
+?
+An ArrayIndexOutOfBoundsException is thrown.
+
+Explain the limitations of arrays compared to ArrayList.
+?
+Arrays have a fixed size; ArrayLists can grow dynamically.

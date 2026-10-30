@@ -12,12 +12,17 @@ up:
 short is a middle ground between byte and int. It can store more than a byte but still saves some space compared to an int.
 
 ## QUESTIONS
-> [!tip]- When is short suitable?
-> In specialized cases like large arrays needing moderate ranges
+#flashcards/java
 
-> [!warning]- Could int be preferred?
-> Yes, for most general-purpose arithmetic
+When is short suitable?
+?
+In specialized cases like large arrays needing moderate ranges
 
-> [!danger]- Overflow or underflow?
-> Happens if values exceed the short range
-- - - 
+Could int be preferred?
+?
+Yes, for most general-purpose arithmetic
+
+Overflow or underflow?
+?
+Happens if values exceed the short range
+- - -
