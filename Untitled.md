@@ -1,18 +1,34 @@
 # UNTITLED
 
-### Vídeo (2-3 minutos)
+## VÍDEO (2-3 MINUTOS)
 
-1. **La situación profesional.** ¿Tienes alguna real de tu trabajo como programador, o prefieres una ficticia? Algunas ideas: un cliente pide recoger más datos de los necesarios, un jefe quiere publicar una aplicación sabiendo que tiene una vulnerabilidad para cumplir el plazo, o te piden un diseño que enganche a los usuarios (el caso de Meta que ya conoces).
+Hola soy Diego Manrique Ortega, en esta entrega de vídeo voy a abordar primero mi opinión sobre el artículo, luego en segundo lugar aplicando esos conceptos a mi caso profesional unir las ideas entre ellos; y mis ideas finales sobre la posición de Gardner. 
+
+El artículo parte de una idea sobre la categorización de las profesiones, con cuatro rasgos para identificar una profesión:
+- requiere estudios y formación
+- permite cumplir una vocación o realización personal
+- da sentimiento de pertenencia a un colectivo
+- es una forma d eganarse la vida
+A estos rasgos le añade el texto una dimensión ética, de que toda profesión es un servicio necesario para la sociedad. 
+
+Esos servicios pueden aportar bienes internos, fruto del resultado directo de ejercerla, lo que aporta a las personas. O externos: dinero, prestigio, poder.
+
+Lo que legitima una profesión es el bien interno según el texto, y muy categoricamente establece que debe cumplir dos requisitos para ser lo que debe ser: que se oriente al bien interno, y que cuando lo haga, el profesional reciba los bienes externos. Si falla cualqueira, la profesión se corrompe.
+
+El autor a su vez profundiza más en el concepto de servicio, e intenta establecer qué es un servicio excelente:
+
+no basta con formación técnica y cumplir el contrato. Hay que cumplir cuatro principios, bueno matizo, idilicamente, habría que cumplirlos, y en la realidad, siempre tiene que haber un diálogo cuando alguno no se cumpla para encontrar una posición aceptable:
+
+- **Beneficencia:** que el trabajo sirva para el bien de las personas y les ayude a vivir mejor, actuando de forma adecuada y responsable.
+- **Autonomía:** tratar siempre a clientes y usuarios como personas. Implica respetar sus derechos y su dignidad, y **escuchar activamente sus necesidades**.
+- **Justicia:** además de ser fiel a los contratos, atender las obligaciones implícitas que se derivan de ellos, **tener en cuenta a todas las partes afectadas** y no olvidar las responsabilidades propias del sector público o del privado.
+- **No maleficencia:** refuerza los tres anteriores con la regla más fundamental, **“antes que nada, no perjudicar”**. Obliga a evitar cualquier práctica que perjudique a la profesión, a los proveedores, a los clientes y usuarios o a la sociedad en general.
 
 
 
-2. **Los bienes.** En esa situación, ¿cuál es el **bien interno** de tu profesión, es decir, para qué sirve la informática a la sociedad? ¿Y qué **bien externo** (dinero, prestigio o poder) empuja en contra?
-3. **Los principios.** ¿Cuáles de los cuatro (beneficencia, autonomía, justicia y no maleficencia) entran en conflicto en tu caso?
-4. **La actuación.** ¿Qué harías? En el caso de Mónica, el texto propone no decidir de forma unilateral, sino exponer las dudas a la empresa y buscar alternativas. ¿Te parece suficiente?
-5. **Gardner.** ¿Estás de acuerdo en que no se puede ser un profesional excelente y una mala persona? ¿O conoces a alguien que lo desmienta?
-6. **El retorno oral de la PR1.** ¿Qué te comentó la profesora del vídeo? Y del capítulo 3, ¿qué quieres mejorar: ritmo, silencios, mirada, manos…?
 
-### Texto argumentativo (250-300 palabras)
+
+## TEXTO ARGUMENTATIVO (250-300 PALABRAS)
 
 7. **Cómo escuchar a los pacientes.** Por ejemplo, entrevistas, pruebas con prototipos o equipos mixtos desde el principio. ¿En qué fase del diseño crees que deben intervenir?
 8. **Los principios.** ¿En cuál se basa sobre todo esa escucha? (Pista: en el texto, la autonomía incluye “escuchar activamente sus necesidades”.) ¿Interviene alguno más?
