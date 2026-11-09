@@ -28,10 +28,12 @@ up:
 When should I use Btrfs over Ext4?
 ?
 Use Btrfs when you need snapshots, compression, or advanced RAID features. Stick with Ext4 for maximum stability and compatibility.
+<!--SR:!2026-11-03,4,270-->
 
 Is Btrfs stable for production use?
 ?
 Btrfs is stable for most use cases, but avoid RAID 5/6 in production environments.
+<!--SR:!2026-11-02,3,250-->
 
 ## RESOURCES
 

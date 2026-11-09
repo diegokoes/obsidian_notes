@@ -47,9 +47,11 @@ fdisk /dev/disktopartition
 What's the recommended font size for installation?
 ?
 Use `ter-132b` for better visibility during installation
+<!--SR:!2026-10-31,1,230-->
 
 Which file system should I use?
 ?
 Btrfs is recommended for its advanced features like snapshots and compression
+<!--SR:!2026-11-03,4,270-->
 
 - - -

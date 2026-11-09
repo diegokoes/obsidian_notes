@@ -40,5 +40,6 @@ docker-compose up -d
 When should I use Docker?
 ?
 Use Docker for application isolation, development environment consistency, and easy deployment.
+<!--SR:!2026-10-30,0,230-->
 
 - - -

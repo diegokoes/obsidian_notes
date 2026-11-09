@@ -8,7 +8,7 @@
 
 ## HOW THIS VAULT WORKS
 - **Folders = domain only** (`tech/`, `math/`, `history/`, `college/<COURSE>/`). Topic structure lives in hub notes and the `up:` property, not in folders.
-- **Names are `prefix_topic`**, lowercase snake_case. The prefix is the parent hub, and the hub is the bare prefix: `java_streams` → `java` → `tech`.
+- **Names are `prefix_topic`**, lowercase snake_case. The prefix is the parent hub, and the hub is the bare bprefix: `java_streams` → `java` → `tech`.
 - **Create notes from their hub**: type `[[net_osi_model]]` in `net`, click it, and the template fills `up` and the header.
 - **Root = inbox**: anything at the root besides `home` and `README` is waiting to be sorted.
 - **Course theory goes to the domain folder** (e.g. `math/`), and the course hub links to it.

@@ -75,6 +75,7 @@ Open your browser and go to `http://localhost:631/jobs/`
 Why can't I see ink levels?
 ?
 Most printers don't support ink level reporting through Linux. You may need manufacturer-specific tools.
+<!--SR:!2026-11-03,4,270-->
 
 - - -
 
