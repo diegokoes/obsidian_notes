@@ -2,29 +2,35 @@
 
 ## VÍDEO (2-3 MINUTOS)
 
-Hola soy Diego Manrique Ortega, en esta entrega de vídeo voy a abordar primero mi opinión sobre el artículo, luego en segundo lugar aplicando esos conceptos a mi caso profesional unir las ideas entre ellos; y mis ideas finales sobre la posición de Gardner. 
+**1.** rasgos → servicio · interno/externos · 2 requisitos → corrupción · 4 principios · matizo: diálogo  
+**2.** TPD: ley salud ↔ producto dañino · apaño · datos fiables / cliente · justicia · no maleficencia  
+**3.** explico + alternativas → departamento → irme  
+**4.** no comparto · ética cambia · tabaco con médicos  
+**5.** no por excelente → no defendible
 
-El artículo parte de una idea sobre la categorización de las profesiones, con cuatro rasgos para identificar una profesión:
-- requiere estudios y formación
-- permite cumplir una vocación o realización personal
-- da sentimiento de pertenencia a un colectivo
-- es una forma d eganarse la vida
-A estos rasgos le añade el texto una dimensión ética, de que toda profesión es un servicio necesario para la sociedad. 
+**0. Presentación (10 s)**  
+Hola, soy Diego Manrique Ortega. Voy a resumir las ideas clave del texto [tal como lo he entendido], aplicarlas a mi caso profesional y, por último, dar mi opinión sobre la posición de Gardner. //
 
-Esos servicios pueden aportar bienes internos, fruto del resultado directo de ejercerla, lo que aporta a las personas. O externos: dinero, prestigio, poder.
+**1. Resumen (60 s)**  
+El artículo parte de los rasgos de una profesión: estudios, vocación, pertenencia a un colectivo y ganarse la vida. Pero añade una dimensión ética: **toda profesión es un servicio necesario para la sociedad**. //
 
-Lo que legitima una profesión es el bien interno según el texto, y muy categoricamente establece que debe cumplir dos requisitos para ser lo que debe ser: que se oriente al bien interno, y que cuando lo haga, el profesional reciba los bienes externos. Si falla cualqueira, la profesión se corrompe.
+Por eso tiene un **bien interno**, su razón de ser, como la salud en la sanidad, y **bienes externos**: dinero, prestigio y poder. Lo que la legitima es el bien interno, y el texto, muy categóricamente, pone dos requisitos: orientarse primero al bien interno y que, entonces, el profesional reciba los externos. Si falla alguno, la profesión se corrompe [y se pierde la confianza]. //
 
-El autor a su vez profundiza más en el concepto de servicio, e intenta establecer qué es un servicio excelente:
+¿Y qué es un servicio excelente? // No basta con la técnica y el contrato. Hay cuatro principios: beneficencia, que el trabajo haga bien; autonomía, respetar y escuchar al usuario; justicia, cumplir lo pactado teniendo en cuenta a todas las partes; y no maleficencia: **“antes que nada, no perjudicar”**. // Bueno, matizo: idealmente se cumplirían todos; en la realidad, cuando no se puede, **hay que dialogar**. //
 
-no basta con formación técnica y cumplir el contrato. Hay que cumplir cuatro principios, bueno matizo, idilicamente, habría que cumplirlos, y en la realidad, siempre tiene que haber un diálogo cuando alguno no se cumpla para encontrar una posición aceptable:
+**2. Mi caso (50 s)**  
+Esto lo veo en mi trabajo: hago soporte y desarrollo de aplicaciones de regulación europea, sobre todo TPD, la directiva del tabaco. **Una ley que protege la salud, pero mi cliente vende un producto que la daña.** //
 
-- **Beneficencia:** que el trabajo sirva para el bien de las personas y les ayude a vivir mejor, actuando de forma adecuada y responsable.
-- **Autonomía:** tratar siempre a clientes y usuarios como personas. Implica respetar sus derechos y su dignidad, y **escuchar activamente sus necesidades**.
-- **Justicia:** además de ser fiel a los contratos, atender las obligaciones implícitas que se derivan de ellos, **tener en cuenta a todas las partes afectadas** y no olvidar las responsabilidades propias del sector público o del privado.
-- **No maleficencia:** refuerza los tres anteriores con la regla más fundamental, **“antes que nada, no perjudicar”**. Obliga a evitar cualquier práctica que perjudique a la profesión, a los proveedores, a los clientes y usuarios o a la sociedad en general.
+Imaginemos que un cliente, para evitar una sanción, me pide un apaño en el reporte, en contra de la ley europea. El bien interno de mi trabajo son datos fiables, que la regulación funcione; el externo, retener al cliente y su dinero. Y chocan dos principios: la justicia, porque hay más afectados[: consumidores, autoridades y competidores que sí cumplen]; y la no maleficencia, porque perjudica a la sociedad, a mi empresa e incluso al propio cliente. //
 
+**3. Actuación (15 s)**  
+Aquí aplico el diálogo: se lo explico y le ofrezco alternativas legales. Si la empresa opta por una vía con la que no estoy de acuerdo, puedo pedir un cambio de departamento y, en último recurso, irme. //
 
+**4. Gardner (25 s)**  
+Por eso // **no comparto del todo la cita de Gardner.** Me parece una definición poco útil: la ética se consensúa como sociedad, pero va cambiando. [El tabaco se anunciaba hace décadas con médicos, y hoy lo regula una directiva europea.] Lo que una sociedad ve normal, otra lo ve aborrecible. //
+
+**5. Cierre (10 s)**  
+Así que, si rechazara ese apaño, **no sería para ser excelente, sino porque no me parece defendible** y no estaría cómodo con ello.
 
 
 
