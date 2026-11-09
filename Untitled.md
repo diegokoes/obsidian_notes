@@ -14,9 +14,9 @@ Hola, soy Diego Manrique Ortega. Voy a resumir las ideas clave del texto [tal co
 **1. Resumen (60 s)**  
 El artículo parte de los rasgos de una profesión: estudios, vocación, pertenencia a un colectivo y ganarse la vida. Pero añade una dimensión ética: **toda profesión es un servicio necesario para la sociedad**. //
 
-Por eso tiene un **bien interno**, su razón de ser, como la salud en la sanidad, y **bienes externos**: dinero, prestigio y poder. Lo que la legitima es el bien interno, y el texto, muy categóricamente, pone dos requisitos: orientarse primero al bien interno y que, entonces, el profesional reciba los externos. Si falla alguno, la profesión se corrompe [y se pierde la confianza]. //
+Por eso tiene un **bien interno**, su razón de ser, qué aporta directamente en su servicio, y **bienes externos**: dinero, prestigio y poder. Lo que la legitima es el bien interno, y el texto, muy categóricamente, pone dos requisitos: orientarse primero al bien interno y que, entonces, el profesional reciba los externos. Si falla alguno, la profesión se corrompe [y se pierde la confianza]. //
 
-¿Y qué es un servicio excelente? // No basta con la técnica y el contrato. Hay cuatro principios: beneficencia, que el trabajo haga bien; autonomía, respetar y escuchar al usuario; justicia, cumplir lo pactado teniendo en cuenta a todas las partes; y no maleficencia: **“antes que nada, no perjudicar”**. // Bueno, matizo: idealmente se cumplirían todos; en la realidad, cuando no se puede, **hay que dialogar**. //
+Ahora bien, si el bien interno es lo que legitima una profesión, ¿cómo se ofrece un servicio excelente No basta con la técnica y el contrato. Hay cuatro principios: beneficencia, que el trabajo haga bien; autonomía, respetar y escuchar al usuario; justicia, cumplir lo pactado teniendo en cuenta a todas las partes; y no maleficencia: **“antes que nada, no perjudicar”**. // Bueno, matizo: idealmente se cumplirían todos; en la realidad, cuando no se puede, **hay que dialogar**. //
 
 **2. Mi caso (50 s)**  
 Esto lo veo en mi trabajo: hago soporte y desarrollo de aplicaciones de regulación europea, sobre todo TPD, la directiva del tabaco. **Una ley que protege la salud, pero mi cliente vende un producto que la daña.** //
